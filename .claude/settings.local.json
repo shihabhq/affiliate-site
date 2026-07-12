@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "WebFetch(domain:upload.wikimedia.org)",
+      "Bash(curl:*)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:nagad.com.bd)",
+      "WebFetch(domain:rocket.dutchbanglabank.com)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(r[''''title'''']\\) for r in data[''''query''''][''''search'''']]\")",
+      "WebFetch(domain:play.google.com)"
+    ]
+  }
+}

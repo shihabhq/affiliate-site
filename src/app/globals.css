@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-primary: #A435F0;
+  --color-purple-hover: #8710D8;
+  --color-dark: #1C1D1F;
+  --color-gray-text: #6A6F73;
+  --color-gray-border: #D1D7DC;
+  --color-bg-light: #F7F9FA;
+  --color-yellow-rating: #F69C08;
+  --color-green-price: #1E6055;
+  --color-whatsapp: #25D366;
+  --color-messenger: #0084FF;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #ffffff;
+  color: #1C1D1F;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(90deg, #A435F0 0%, #d47eff 50%, #A435F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

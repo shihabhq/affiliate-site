@@ -1,0 +1,15 @@
+export const siteConfig = {
+  name: "Udemy Course Bangladesh",
+  shortName: "UCB",
+  domain: "https://udemycourse.com",
+  affiliateLink: "https://trk.udemy.com/xJmW2A",
+  facebook: "https://www.facebook.com/udemycoursebangladesh",
+  facebookMessage: "https://m.me/udemycoursebangladesh",
+  instagram: "https://www.instagram.com/udemybangladesh/",
+  whatsappNumber: "+8801735857535",
+  whatsappLink: "https://wa.me/8801735857535",
+  phone: "+8801735857535",
+  locale: "en_BD",
+  country: "Bangladesh",
+  address: "68-69 Concept Tower, Greenroad, Dhaka 1205, Bangladesh",
+};
