@@ -93,32 +93,17 @@ export default function WelcomeModal() {
           </h2>
 
           <p className="text-gray-300 text-sm mb-6 max-w-xs mx-auto">
-           Buy Top career changing courses with lifetime access & certificate.
+            Buy Top career changing courses with lifetime access &amp; certificate.
           </p>
 
-          {/* Primary CTA */}
-          <a
-            href={siteConfig.affiliateLink}
-            target="_blank"
-            rel="sponsored noopener"
-            onClick={() => setOpen(false)}
-            className="block w-full bg-purple-primary hover:bg-purple-hover text-white font-extrabold text-base py-4 rounded-xl transition-colors mb-4"
-            style={{ boxShadow: "0 0 30px rgba(164,53,240,0.35)" }}
-          >
-            Get Discount on Udemy →
-          </a>
-
-          {/* Divider */}
-          <div className="flex items-center gap-3 mb-4">
-            <div className="flex-1 h-px bg-white/10" />
-            <span className="text-xs text-gray-100 uppercase tracking-wider font-medium">
-              আপনার ডুয়াল কারেন্সি কার্ড নেই?
-            </span>
-            <div className="flex-1 h-px bg-white/10" />
-          </div>
-
-          {/* Messaging buttons */}
-          <div className="flex gap-3 mb-4">
+          {/* Primary CTAs — Messaging (no card path) */}
+          <p className="text-sm text-gray-200 font-semibold mb-1">
+            আপনার ডুয়াল কারেন্সি কার্ড নেই?
+          </p>
+          <p className="text-xs text-gray-400 mb-4">
+            আমরা আপনার হয়ে বিকাশ/নগদ/রকেটের মাধ্যমে কোর্স কিনে দিবো। এখনি মেসেজ করুন!
+          </p>
+          <div className="flex gap-3 mb-5">
             <a
               href={waLink}
               target="_blank"
@@ -141,13 +126,29 @@ export default function WelcomeModal() {
               <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.84 1.344 5.374 3.474 7.092V22l3.178-1.746A10.6 10.6 0 0 0 12 20.519c5.523 0 10-4.145 10-9.26C22 6.145 17.523 2 12 2Z"/>
               </svg>
-              Facebook
+              Messenger
             </a>
           </div>
 
-          <p className="text-xs text-gray-300">
-            আপনার কাছে ডলার কার্ড না থাকলেও আমাদের মেসেজ করলে আপনার হয়ে আমরা কোর্স কিনে দেওয়ার ব্যাবস্থা করবো।
-          </p>
+          {/* Divider */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex-1 h-px bg-white/10" />
+            <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">
+              ডলার কার্ড আছে?
+            </span>
+            <div className="flex-1 h-px bg-white/10" />
+          </div>
+
+          {/* Secondary CTA — affiliate link */}
+          <a
+            href={siteConfig.affiliateLink}
+            target="_blank"
+            rel="sponsored noopener"
+            onClick={() => setOpen(false)}
+            className="block w-full bg-purple-primary/80 hover:bg-purple-hover text-white font-bold text-sm py-3 rounded-xl transition-colors"
+          >
+            Get Discount on Udemy →
+          </a>
         </div>
       </div>
     </div>

@@ -100,35 +100,16 @@ export default function PurchaseModal({
         {/* Body */}
         <div className="p-5">
           <p className="text-base font-bold text-dark mb-5 text-center">
-            Do you have a Dollar Card / Dual Currency Card?
+            কোর্সটি কিনতে মেসেজ করুন!
           </p>
 
-          {/* Option A */}
-          <div className="border border-gray-border rounded-lg p-4 mb-4">
+          {/* Option A — No card (primary) */}
+          <div className="border-2 border-whatsapp rounded-lg p-4 mb-4 bg-green-50">
             <p className="text-sm font-semibold text-dark mb-1">
-              ✅ Yes, I have a card
+              💳 ডলার কার্ড নেই? কোনো সমস্যা নেই!
             </p>
             <p className="text-xs text-gray-text mb-3">
-              Buy directly on Udemy with your international card and get up to 90% off.
-            </p>
-            <a
-              href={siteConfig.affiliateLink}
-              target="_blank"
-              rel="sponsored noopener"
-              className="block w-full bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold py-3 px-4 rounded text-center transition-colors"
-            >
-              Get up to 90% OFF on Udemy →
-            </a>
-          </div>
-
-          {/* Option B */}
-          <div className="border border-gray-border rounded-lg p-4">
-            <p className="text-sm font-semibold text-dark mb-1">
-              🔴 No, I don&apos;t have a card
-            </p>
-            <p className="text-xs text-gray-text mb-3">
-              Pay with bKash, Nagad, or Rocket. Course delivered to your email
-              within a few hours.
+              বিকাশ, নগদ বা রকেটে পেমেন্ট করুন। কোর্স আপনার ইমেইলে পৌঁছে যাবে।
             </p>
             <p className="text-xs font-medium text-green-price mb-3">
               বিকাশ/নগদ দিয়ে পেমেন্ট করুন
@@ -161,6 +142,24 @@ export default function PurchaseModal({
               Pay easily with bKash, Nagad or Rocket. Course delivered to your
               email with lifetime access.
             </p>
+          </div>
+
+          {/* Option B — Has card (secondary) */}
+          <div className="border border-gray-border rounded-lg p-4">
+            <p className="text-sm font-semibold text-dark mb-1">
+              ✅ আপনার কাছে Dollar / Dual Currency Card আছে?
+            </p>
+            <p className="text-xs text-gray-text mb-3">
+              Buy directly on Udemy with your international card and get up to 90% off.
+            </p>
+            <a
+              href={siteConfig.affiliateLink}
+              target="_blank"
+              rel="sponsored noopener"
+              className="block w-full bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold py-3 px-4 rounded text-center transition-colors"
+            >
+              Get up to 90% OFF on Udemy →
+            </a>
           </div>
         </div>
       </div>
