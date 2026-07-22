@@ -27,6 +27,7 @@ export const categories = [
   "programming",
   "excel-finance",
   "devops",
+  "cpa-marketing",
 ] as const;
 
 export const courses: Course[] = [
@@ -270,6 +271,101 @@ export const courses: Course[] = [
       "Pass the AWS Certified Solutions Architect Associate Certification SAA-C03. Complete course with practice exams.",
     tags: ["AWS", "Cloud", "DevOps", "Certification", "Solutions Architect"],
   },
+  // --- Digital Marketing & SEO ---
+  {
+    id: "seo-keyword-research",
+    title: "SEO Training & Keyword Research Masterclass 2026",
+    slug: "seo-training-keyword-research-masterclass",
+    category: "digital-marketing",
+    image: "/courses/The Complete Digital Marketing Guide - 27 Courses in 1.png",
+    originalPrice: "$149.99",
+    rating: 4.6,
+    reviewCount: 72000,
+    shortDescription:
+      "Master SEO and keyword research. Learn on-page SEO, technical SEO, link building, and rank higher on Google.",
+    tags: ["SEO", "Keyword Research", "Google", "On-Page SEO", "Backlinks"],
+  },
+  // --- CPA Marketing ---
+  {
+    id: "cpa-marketing-complete",
+    title: "CPA Marketing Masterclass — Complete CPA Marketing Course",
+    slug: "cpa-marketing-masterclass-complete-course",
+    category: "cpa-marketing",
+    image: "/courses/The Complete Digital Marketing Guide - 27 Courses in 1.png",
+    originalPrice: "$199.99",
+    rating: 4.5,
+    reviewCount: 38000,
+    shortDescription:
+      "Learn CPA marketing from scratch. Find CPA offers, drive traffic, earn commissions without a product. Perfect for Bangladeshi freelancers.",
+    tags: ["CPA Marketing", "Affiliate Marketing", "Traffic", "Monetization", "Freelancing"],
+  },
+  {
+    id: "cpa-affiliate-zero-to-hero",
+    title: "Affiliate Marketing & CPA Marketing — Zero to Hero",
+    slug: "affiliate-marketing-cpa-zero-to-hero",
+    category: "cpa-marketing",
+    image: "/courses/The Complete Financial Analyst Course 2026.png",
+    originalPrice: "$149.99",
+    rating: 4.4,
+    reviewCount: 25000,
+    shortDescription:
+      "Start earning online with CPA and affiliate marketing. No experience needed — learn to find offers, build funnels, and make money online.",
+    tags: ["CPA", "Affiliate Marketing", "Make Money Online", "Funnels", "Traffic"],
+  },
+  // --- Freelancing ---
+  {
+    id: "freelancing-complete",
+    title: "Complete Freelancing Course — Work From Home & Earn Online",
+    slug: "complete-freelancing-course-work-from-home",
+    category: "freelancing",
+    image: "/courses/Complete Web Design from Figma to Webflow to Freelancing.png",
+    originalPrice: "$149.99",
+    rating: 4.6,
+    reviewCount: 58000,
+    shortDescription:
+      "Start your freelancing career on Fiverr, Upwork, and more. Learn how to get clients, set prices, and earn online from Bangladesh.",
+    tags: ["Freelancing", "Fiverr", "Upwork", "Work from Home", "Earn Online"],
+  },
+  {
+    id: "fiverr-success",
+    title: "Fiverr Freelancing — Rank Your Gig & Get Orders Fast",
+    slug: "fiverr-freelancing-rank-gig-get-orders",
+    category: "freelancing",
+    image: "/courses/The Complete Financial Analyst Course 2026.png",
+    originalPrice: "$99.99",
+    rating: 4.5,
+    reviewCount: 31000,
+    shortDescription:
+      "Learn how to create a winning Fiverr gig, rank on Fiverr search, and get your first order. The #1 Fiverr course for beginners in Bangladesh.",
+    tags: ["Fiverr", "Freelancing", "Gig Ranking", "Client Getting", "Online Income"],
+  },
+  // --- English Language ---
+  {
+    id: "english-speaking-masterclass",
+    title: "English Speaking Masterclass — Speak English Fluently",
+    slug: "english-speaking-masterclass-speak-fluently",
+    category: "english-language",
+    image: "/courses/The Complete Python Bootcamp From Zero to Hero in Python.png",
+    originalPrice: "$129.99",
+    rating: 4.6,
+    reviewCount: 95000,
+    shortDescription:
+      "Improve your English speaking, pronunciation, and confidence. Perfect for job interviews, IELTS prep, and professional communication.",
+    tags: ["English Speaking", "Pronunciation", "IELTS", "Communication", "Fluency"],
+  },
+  {
+    id: "english-grammar-complete",
+    title: "Complete English Grammar Course — Beginner to Advanced",
+    slug: "complete-english-grammar-course-beginner-to-advanced",
+    category: "english-language",
+    image: "/courses/The Data Science Course Complete Data Science Bootcamp 2026.png",
+    originalPrice: "$99.99",
+    rating: 4.5,
+    reviewCount: 61000,
+    shortDescription:
+      "Master English grammar from beginner to advanced. Learn tenses, articles, prepositions, and write correct English with confidence.",
+    tags: ["English Grammar", "Writing", "Communication", "IELTS", "Beginner"],
+  },
 ];
 
 // Proof image filenames from public/proofs/ — prefixed with /proofs/ at render time
@@ -388,5 +484,35 @@ export const faqs = [
     question: "Can I access the course on mobile?",
     answer:
       "Yes. Udemy has a free mobile app for Android and iOS. Once you have access to a course, you can watch it on your phone, tablet, or computer — anywhere, anytime.",
+  },
+  {
+    question: "Are there free Udemy courses available in Bangladesh?",
+    answer:
+      "Udemy does offer some free courses, but most quality courses are paid. However, during Udemy's frequent sales, you can get courses for up to 90% off — sometimes as low as ৳500–৳800 BDT. That's almost free! We always share the best available discount links. For card users, click our affiliate link. For bKash users, just message us.",
+  },
+  {
+    question: "Is there a 100% off coupon code for Udemy courses?",
+    answer:
+      "Legitimate 100% off coupon codes for premium Udemy courses are very rare and expire within hours. Instead of chasing expired coupons, use our service: during Udemy sales, top courses go down to $10–$15 (around ৳1,000–৳1,500 BDT). Message us on WhatsApp and we'll share the best current price.",
+  },
+  {
+    question: "Can I learn CPA marketing through Udemy? Available in Bangladesh?",
+    answer:
+      "Yes! Udemy has excellent CPA marketing courses that teach you how to earn online through cost-per-action marketing. These are very popular with Bangladeshi freelancers. You can buy any CPA marketing Udemy course through our service — pay with bKash, Nagad, or Rocket. Just message us with the course name.",
+  },
+  {
+    question: "Are there Udemy courses in Bangla (Bengali) language?",
+    answer:
+      "Yes, Udemy has a growing number of courses taught in Bengali/Bangla — including web development, digital marketing, freelancing, and more. You can filter by language on Udemy. To buy any Bangla Udemy course in Bangladesh with bKash payment, just message us with the course link and we'll handle the rest.",
+  },
+  {
+    question: "Is there a good SEO course on Udemy for Bangladeshi learners?",
+    answer:
+      "Absolutely. Udemy has world-class SEO courses covering keyword research, on-page SEO, technical SEO, link building, and Google ranking strategies. These are in high demand among Bangladeshi digital marketers and freelancers. Message us to buy any SEO Udemy course with bKash payment.",
+  },
+  {
+    question: "What web development courses are available on Udemy?",
+    answer:
+      "Udemy has hundreds of web development courses — from HTML/CSS basics to React, Node.js, Python, and full-stack development. Top courses like The Web Developer Bootcamp and The Ultimate React Course are extremely popular in Bangladesh. You can buy any of these with bKash or a dollar card through our service.",
   },
 ];

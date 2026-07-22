@@ -14,10 +14,22 @@ import { courses, proofs, faqs } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF ",
+  title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash · Nagad · Rocket",
   description:
-    "Buy any Udemy course in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off. 1000+ happy learners. Pay in BDT.",
+    "Buy any Udemy course in Bangladesh — web development, digital marketing, graphic design, data science & more. Pay with bKash, Nagad, Rocket. No dollar card needed. Up to 90% off. 1000+ happy learners.",
   alternates: { canonical: siteConfig.domain },
+  openGraph: {
+    title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+    description:
+      "Pay with bKash, Nagad, Rocket — no dollar card needed. Web development, digital marketing, CPA marketing, graphic design and 100s more Udemy courses available in BD.",
+    url: siteConfig.domain,
+    images: [
+      {
+        url: `${siteConfig.domain}/assets/main-logo.jpg`,
+        alt: "Udemy Course Bangladesh — Buy Udemy with bKash",
+      },
+    ],
+  },
 };
 
 const homeJsonLd = {

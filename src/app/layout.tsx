@@ -25,13 +25,24 @@ export const metadata: Metadata = {
     default: "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash Accepted",
   },
   description:
-    "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on top Udemy courses. 1000+ happy learners.",
+    "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on web development, digital marketing, graphic design & more. 1000+ happy learners.",
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.domain}/assets/main-logo.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Udemy Course Bangladesh — Buy Udemy Courses with bKash",
+      },
+    ],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    images: [`${siteConfig.domain}/assets/main-logo.jpg`],
+  },
 };
 
 const organizationJsonLd = {

@@ -19,40 +19,78 @@ const categoryLabels: Record<string, string> = {
   programming: "Programming",
   "excel-finance": "Excel & Finance",
   devops: "DevOps & Cloud",
+  "cpa-marketing": "CPA Marketing",
 };
 
 const categoryDescriptions: Record<string, string> = {
   "web-development":
-    "Learn HTML, CSS, JavaScript, React, Node.js and more. Build real websites and web apps with these top Udemy web development courses available in Bangladesh.",
+    "Learn web development with the best Udemy courses — HTML, CSS, JavaScript, React, Node.js, Python and more. Build real websites and web apps. Available in Bangladesh: pay with bKash, Nagad, or Rocket. Udemy web development courses in Bangla also available — just message us.",
   "digital-marketing":
-    "Master SEO, Facebook Ads, Google Ads, email marketing and social media. These Udemy digital marketing courses are available in Bangladesh with bKash payment.",
+    "Master digital marketing with top Udemy courses — SEO, keyword research, Facebook Ads, Google Ads, email marketing, and social media marketing. Udemy digital marketing Bangla courses also available. Buy in Bangladesh with bKash payment — no dollar card needed.",
   "graphic-design":
-    "Learn Photoshop, Illustrator, Figma, Canva and more. Start or grow your graphic design career with these Udemy courses available in Bangladesh.",
+    "Learn Photoshop, Illustrator, Figma, Canva, and UI/UX design. Start or grow your graphic design career with top-rated Udemy courses available in Bangladesh. Pay with bKash, Nagad, or Rocket.",
   "data-science":
-    "Learn Python, machine learning, data analysis, and AI. Top Udemy data science courses available in Bangladesh — pay with bKash, Nagad, or Rocket.",
+    "Learn Python, machine learning, data analysis, and AI. Top Udemy data science courses available in Bangladesh — pay with bKash, Nagad, or Rocket. No dollar card required.",
   programming:
-    "Learn Python, Java, C++, AI programming and more. Best Udemy programming courses available in Bangladesh with local bKash/Nagad payment options.",
+    "Learn Python, Java, AI programming, and more. Best Udemy programming courses available in Bangladesh with local bKash/Nagad payment. Perfect for students and job holders.",
   "excel-finance":
-    "Master Microsoft Excel, financial analysis, accounting and more. These Udemy Excel and finance courses are available in Bangladesh — no dollar card needed.",
+    "Master Microsoft Excel, financial analysis, accounting, and more. Udemy Excel courses available in Bangladesh — no dollar card needed. Buy with bKash in BDT.",
   devops:
-    "Learn Docker, Kubernetes, AWS, and cloud computing. Top Udemy DevOps and cloud courses available in Bangladesh with bKash payment.",
+    "Learn Docker, Kubernetes, AWS, and cloud computing. Top Udemy DevOps and cloud courses available in Bangladesh with bKash payment. Ideal for IT professionals.",
   freelancing:
-    "Learn freelancing skills for Fiverr, Upwork and more. Start your freelancing career with these Udemy courses available in Bangladesh.",
+    "Start your freelancing career on Fiverr and Upwork with these Udemy freelancing courses. Learn how to earn online from Bangladesh — no dollar card needed, pay with bKash or Nagad.",
   "english-language":
-    "Improve your English speaking, writing and communication skills. These Udemy English courses are available in Bangladesh with easy bKash payment.",
+    "Improve your English speaking, writing, grammar, and communication skills. These Udemy English language courses are available in Bangladesh with easy bKash payment. Perfect for IELTS prep, job interviews, and professional growth.",
+  "cpa-marketing":
+    "Learn CPA marketing and affiliate marketing with the best Udemy courses. CPA (Cost Per Action) marketing is one of the most popular ways to earn online in Bangladesh. Buy any CPA marketing Udemy course with bKash, Nagad, or Rocket — no dollar card needed.",
 };
 
 export async function generateStaticParams() {
   return categories.map((category) => ({ category }));
 }
 
+const categoryMetaOverrides: Record<
+  string,
+  { title: string; description: string }
+> = {
+  "web-development": {
+    title: "Web Development Udemy Courses in Bangladesh — Buy with bKash",
+    description:
+      "Best web development Udemy courses in Bangladesh — HTML, CSS, JavaScript, React, Node.js. Buy with bKash, Nagad, or Rocket. No dollar card. Up to 90% off.",
+  },
+  "digital-marketing": {
+    title: "Digital Marketing & SEO Udemy Courses Bangladesh — bKash Payment",
+    description:
+      "Top Udemy digital marketing courses — SEO, keyword research, Facebook Ads, Google Ads & more. Udemy digital marketing Bangla courses also available. Buy with bKash in Bangladesh.",
+  },
+  "cpa-marketing": {
+    title: "CPA Marketing Udemy Courses in Bangladesh — Buy with bKash",
+    description:
+      "Learn CPA marketing and affiliate marketing with top Udemy courses. Available in Bangladesh — pay with bKash, Nagad, or Rocket. No dollar card needed. Up to 90% off.",
+  },
+  freelancing: {
+    title: "Freelancing Udemy Courses Bangladesh — Fiverr, Upwork & Earn Online",
+    description:
+      "Best Udemy freelancing courses in Bangladesh — Fiverr, Upwork, online earning, and more. Pay with bKash or Nagad — no dollar card needed. Start earning online from Bangladesh.",
+  },
+  "english-language": {
+    title: "English Language Udemy Courses in Bangladesh — Speak Fluently",
+    description:
+      "Top Udemy English courses in Bangladesh — speaking, grammar, IELTS prep, and professional communication. Buy with bKash, Nagad, Rocket. No dollar card needed.",
+  },
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const label = categoryLabels[category];
   if (!label) return {};
+  const override = categoryMetaOverrides[category];
   return {
-    title: `${label} Udemy Courses in Bangladesh — Up to 90% OFF`,
-    description: `Buy ${label} Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on top-rated ${label.toLowerCase()} courses.`,
+    title:
+      override?.title ?? `${label} Udemy Courses in Bangladesh — Up to 90% OFF`,
+    description:
+      override?.description ??
+      `Buy ${label} Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on top-rated ${label.toLowerCase()} courses.`,
     alternates: { canonical: `${siteConfig.domain}/courses/${category}` },
   };
 }

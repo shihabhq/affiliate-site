@@ -2,11 +2,12 @@ import type { MetadataRoute } from "next";
 import { categories } from "@/data/courses";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://udemycourse.com";
+  const base = "https://udemycoursebd.com";
   const staticRoutes = [
     "/",
     "/courses",
     "/how-to-buy",
+    "/free-courses",
     "/proofs",
     "/faq",
     "/about",
@@ -27,8 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ? 1.0
           : route === "/how-to-buy"
           ? 0.9
-          : route === "/courses"
+          : route === "/courses" || route === "/free-courses"
           ? 0.8
+          : route === "/faq" || route === "/proofs"
+          ? 0.7
           : 0.6,
     })),
     ...categories.map((cat) => ({

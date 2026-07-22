@@ -6,10 +6,16 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title:
-    "How to Buy Udemy Course in Bangladesh (2026) — With or Without a Card",
+    "How to Buy Udemy Course in Bangladesh (2026) — bKash, Nagad, Rocket or Card",
   description:
-    "Step-by-step guide to buying Udemy courses in Bangladesh. Learn how to pay with bKash, Nagad, or Rocket — no dollar card needed. Also covers buying with a card.",
+    "Complete guide: how to buy any Udemy course in Bangladesh — with bKash, Nagad, Rocket or a dollar card. Also covers buying Bangla Udemy courses, discounts, and payment methods. Step-by-step for beginners.",
   alternates: { canonical: `${siteConfig.domain}/how-to-buy` },
+  openGraph: {
+    title: "How to Buy Udemy Course in Bangladesh (2026)",
+    description:
+      "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Step-by-step guide with both methods.",
+    url: `${siteConfig.domain}/how-to-buy`,
+  },
 };
 
 const howToFaqs = [
@@ -356,6 +362,77 @@ export default function HowToBuyPage() {
             </h2>
             <div className="h-1 w-8 bg-purple-primary rounded-full mb-6" />
             <FaqAccordion items={howToFaqs} />
+          </section>
+
+          {/* Bangla courses & popular topics */}
+          <section className="mb-12" id="popular-courses-bangladesh">
+            <h2 className="text-xl font-bold text-dark mb-1">
+              Popular Udemy Courses in Bangladesh — What People Search Most
+            </h2>
+            <div className="h-1 w-8 bg-purple-primary rounded-full mb-4" />
+            <p className="text-sm text-gray-text mb-5 leading-relaxed">
+              Here are the most searched Udemy courses among Bangladeshi
+              learners. All available through our bKash service — just tell us
+              the course name.
+            </p>
+            <div className="space-y-2 text-sm text-gray-text">
+              {[
+                {
+                  topic: "Web Development Course",
+                  note: "HTML, CSS, JavaScript, React, Node.js — top pick for aspiring developers",
+                  href: "/courses/web-development",
+                },
+                {
+                  topic: "Digital Marketing Masterclass",
+                  note: "SEO, Facebook Ads, Google Ads, email marketing — Bangla tutorials available",
+                  href: "/courses/digital-marketing",
+                },
+                {
+                  topic: "CPA Marketing Course",
+                  note: "Earn online through cost-per-action marketing — very popular in BD",
+                  href: "/courses/cpa-marketing",
+                },
+                {
+                  topic: "SEO & Keyword Research",
+                  note: "Rank websites on Google — essential for freelancers and business owners",
+                  href: "/courses/digital-marketing",
+                },
+                {
+                  topic: "Freelancing Course (Fiverr / Upwork)",
+                  note: "Start earning online from Bangladesh without a dollar card for signup",
+                  href: "/courses/freelancing",
+                },
+                {
+                  topic: "Graphic Design (Photoshop, Figma)",
+                  note: "UI/UX, logo design, branding — highly paid skill in Bangladesh",
+                  href: "/courses/graphic-design",
+                },
+              ].map((item) => (
+                <div
+                  key={item.topic}
+                  className="flex gap-3 items-start border border-gray-border rounded-xl p-3 bg-bg-light"
+                >
+                  <span className="text-green-price mt-0.5 shrink-0">✔</span>
+                  <div>
+                    <Link
+                      href={item.href}
+                      className="font-semibold text-dark hover:text-purple-primary transition-colors"
+                    >
+                      {item.topic}
+                    </Link>
+                    <p className="text-xs text-gray-text mt-0.5">{item.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-text mt-4">
+              Udemy also has courses taught in <strong>Bangla (Bengali)</strong>{" "}
+              — just mention &ldquo;Bangla course&rdquo; when you message us and
+              we&apos;ll help you find the right one.{" "}
+              <span className="text-purple-primary">
+                বাংলায় কোর্স পেতে আমাদের মেসেজ করুন।
+              </span>
+            </p>
           </section>
 
           {/* Final CTA block */}

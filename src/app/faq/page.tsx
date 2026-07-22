@@ -6,9 +6,9 @@ import { faqs } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "FAQ — Udemy Courses Bangladesh | bKash, Certificate, Delivery Questions",
+  title: "FAQ — Udemy Bangladesh | bKash Payment, Free Courses, Certificates & More",
   description:
-    "Answers to the most common questions about buying Udemy courses in Bangladesh with bKash, Nagad, Rocket. Certificates, lifetime access, BDT pricing, and more.",
+    "Answers to all common questions about buying Udemy courses in Bangladesh — bKash/Nagad payment, free courses, coupon codes, CPA marketing, Bangla tutorials, certificates, BDT pricing & more.",
   alternates: { canonical: `${siteConfig.domain}/faq` },
 };
 

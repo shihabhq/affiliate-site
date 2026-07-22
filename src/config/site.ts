@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Udemy Course Bangladesh",
   shortName: "UCB",
-  domain: "https://udemycourse.com",
+  domain: "https://udemycoursebd.com",
   affiliateLink: "https://trk.udemy.com/xJmW2A",
   facebook: "https://www.facebook.com/udemycoursebangladesh",
   facebookMessage: "https://m.me/udemycoursebangladesh",
