@@ -17,6 +17,20 @@ export const metadata: Metadata = {
     description:
       "Get heavily discounted Udemy courses in Bangladesh. Pay with bKash — no dollar card needed. Web dev, digital marketing, CPA marketing and 100s more.",
     url: `${siteConfig.domain}/free-courses`,
+    images: [
+      {
+        url: "/assets/OG.png",
+        width: 1904,
+        height: 982,
+        alt: "Udemy Free Courses & Discounts — Bangladesh",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Udemy Free Courses & Discounts in Bangladesh — Up to 90% OFF",
+    description: "Get up to 90% off Udemy courses in Bangladesh. Pay with bKash, Nagad, Rocket.",
+    images: ["/assets/OG.png"],
   },
 };
 

@@ -15,6 +15,20 @@ export const metadata: Metadata = {
     description:
       "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Step-by-step guide with both methods.",
     url: `${siteConfig.domain}/how-to-buy`,
+    images: [
+      {
+        url: "/assets/OG.png",
+        width: 1904,
+        height: 982,
+        alt: "How to Buy Udemy Course in Bangladesh",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Buy Udemy Course in Bangladesh (2026)",
+    description: "Buy with bKash, Nagad, Rocket or a dollar card. Step-by-step guide.",
+    images: ["/assets/OG.png"],
   },
 };
 

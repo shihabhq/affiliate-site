@@ -25,10 +25,18 @@ export const metadata: Metadata = {
     url: siteConfig.domain,
     images: [
       {
-        url: `${siteConfig.domain}/assets/main-logo.jpg`,
-        alt: "Udemy Course Bangladesh — Buy Udemy with bKash",
+        url: "/assets/OG.png",
+        width: 1904,
+        height: 982,
+        alt: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+    description: "Pay with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off.",
+    images: ["/assets/OG.png"],
   },
 };
 

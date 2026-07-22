@@ -10,7 +10,10 @@
       "WebFetch(domain:rocket.dutchbanglabank.com)",
       "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(r[''''title'''']\\) for r in data[''''query''''][''''search'''']]\")",
       "WebFetch(domain:play.google.com)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(grep -r opengraph-image 'E:/Code V2/udemycourse/node_modules/next/dist/docs/01-app/' --include=*.md -l)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\(''E:/Code V2/udemycourse/public/assets/OG.png''\\); print\\(img.size, img.format\\)\")",
+      "Bash(powershell -command \"Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(''E:/Code V2/udemycourse/public/assets/OG.png''\\); Write-Host $img.Width $img.Height\")"
     ]
   }
 }

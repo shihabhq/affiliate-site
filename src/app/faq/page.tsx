@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   description:
     "Answers to all common questions about buying Udemy courses in Bangladesh — bKash/Nagad payment, free courses, coupon codes, CPA marketing, Bangla tutorials, certificates, BDT pricing & more.",
   alternates: { canonical: `${siteConfig.domain}/faq` },
+  openGraph: {
+    title: "FAQ — Udemy Course Bangladesh",
+    description:
+      "All your questions answered: bKash payment, free courses, certificates, CPA marketing, Bangla tutorials and more.",
+    url: `${siteConfig.domain}/faq`,
+    images: [{ url: "/assets/OG.png", width: 1904, height: 982, alt: "FAQ — Udemy Course Bangladesh" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ — Udemy Course Bangladesh",
+    description: "bKash payment, free courses, certificates, CPA marketing and more — answered.",
+    images: ["/assets/OG.png"],
+  },
 };
 
 const faqJsonLd = {

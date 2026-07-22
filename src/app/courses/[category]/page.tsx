@@ -80,18 +80,39 @@ const categoryMetaOverrides: Record<
   },
 };
 
+const OG_IMAGE = {
+  url: "/assets/OG.png",
+  width: 1904,
+  height: 982,
+  alt: "Udemy Courses in Bangladesh — Buy with bKash",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const label = categoryLabels[category];
   if (!label) return {};
   const override = categoryMetaOverrides[category];
+  const title =
+    override?.title ?? `${label} Udemy Courses in Bangladesh — Up to 90% OFF`;
+  const description =
+    override?.description ??
+    `Buy ${label} Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on top-rated ${label.toLowerCase()} courses.`;
   return {
-    title:
-      override?.title ?? `${label} Udemy Courses in Bangladesh — Up to 90% OFF`,
-    description:
-      override?.description ??
-      `Buy ${label} Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on top-rated ${label.toLowerCase()} courses.`,
+    title,
+    description,
     alternates: { canonical: `${siteConfig.domain}/courses/${category}` },
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.domain}/courses/${category}`,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [OG_IMAGE.url],
+    },
   };
 }
 

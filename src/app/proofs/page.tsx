@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   description:
     "See real purchase proofs from 1000+ happy customers in Bangladesh who bought Udemy courses with bKash, Nagad, and Rocket through Udemy Course Bangladesh.",
   alternates: { canonical: `${siteConfig.domain}/proofs` },
+  openGraph: {
+    title: "Purchase Proofs — Real Udemy Course Deliveries in Bangladesh",
+    description:
+      "1000+ real customers in Bangladesh bought Udemy courses with bKash through us. See the proofs.",
+    url: `${siteConfig.domain}/proofs`,
+    images: [{ url: "/assets/OG.png", width: 1904, height: 982, alt: "Udemy Purchase Proofs Bangladesh" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real Udemy Purchase Proofs — Bangladesh",
+    description: "1000+ real customers bought Udemy courses with bKash. See proof screenshots.",
+    images: ["/assets/OG.png"],
+  },
 };
 
 const proofsJsonLd = {
