@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
 
 const waLink = `${siteConfig.whatsappLink}?text=${encodeURIComponent(
-  "Hi! I want to buy a Udemy course with bKash. I don't have a dollar card. Can you help me?"
+  "Hi! I want to buy a Udemy course. Can you help me?"
 )}`;
 
 export default function HeroSection() {

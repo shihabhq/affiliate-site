@@ -47,7 +47,7 @@ export default function PurchaseModal({
   if (!isOpen) return null;
 
   const waMessage = encodeURIComponent(
-    `Hi! I want to buy this Udemy course: ${courseTitle}. I don't have a dollar card. How can I pay with bKash?`
+    `Hi! I want to buy this Udemy course: ${courseTitle}. Can you Help me?`
   );
   const waLink = `${siteConfig.whatsappLink}?text=${waMessage}`;
   const fbLink = `${siteConfig.facebookMessage}?ref=course_${encodeURIComponent(courseTitle)}`;
