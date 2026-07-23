@@ -8,19 +8,27 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Purchase Proofs — Real Udemy Course Deliveries in Bangladesh",
   description:
-    "See real purchase proofs from 1000+ happy customers in Bangladesh who bought Udemy courses with bKash, Nagad, and Rocket through Udemy Course Bangladesh.",
+    "See real purchase proofs from 100+ happy customers in Bangladesh who bought Udemy courses with bKash, Nagad, and Rocket through Udemy Course Bangladesh.",
   alternates: { canonical: `${siteConfig.domain}/proofs` },
   openGraph: {
     title: "Purchase Proofs — Real Udemy Course Deliveries in Bangladesh",
     description:
-      "1000+ real customers in Bangladesh bought Udemy courses with bKash through us. See the proofs.",
+      "100+ real customers in Bangladesh bought Udemy courses with bKash through us. See the proofs.",
     url: `${siteConfig.domain}/proofs`,
-    images: [{ url: "/assets/OG.png", width: 1904, height: 982, alt: "Udemy Purchase Proofs Bangladesh" }],
+    images: [
+      {
+        url: "/assets/OG.png",
+        width: 1904,
+        height: 982,
+        alt: "Udemy Purchase Proofs Bangladesh",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Real Udemy Purchase Proofs — Bangladesh",
-    description: "1000+ real customers bought Udemy courses with bKash. See proof screenshots.",
+    description:
+      "100+ real customers bought Udemy courses with bKash. See proof screenshots.",
     images: ["/assets/OG.png"],
   },
 };
@@ -68,7 +76,7 @@ export default function ProofsPage() {
           <div className="bg-bg-light border border-gray-border rounded-lg p-4 mb-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
             <div>
               <p className="font-bold text-dark">
-                 Huge delivery proofs given to our customers and counting
+                Huge delivery proofs given to our customers and counting
               </p>
               <p className="text-sm text-gray-text">
                 New proofs added regularly as more customers receive their

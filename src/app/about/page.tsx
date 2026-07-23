@@ -83,7 +83,7 @@ export default function AboutPage() {
           <h2 className="text-xl font-bold text-dark mt-8">Our Track Record</h2>
           <p>
             We have served{" "}
-            <strong className="text-dark">1000+ happy learners</strong> across
+            <strong className="text-dark">100+ happy learners</strong> across
             Bangladesh — from students in Dhaka to freelancers in Sylhet, and
             professionals in Chittagong and beyond. Our purchase proofs are
             publicly available on our{" "}

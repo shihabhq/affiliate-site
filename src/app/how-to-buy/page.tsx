@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title:
     "How to Buy Udemy Course in Bangladesh (2026) — bKash, Nagad, Rocket or Card",
   description:
-    "Complete guide: how to buy any Udemy course in Bangladesh — with bKash, Nagad, Rocket or a dollar card. Also covers buying Bangla Udemy courses, discounts, and payment methods. Step-by-step for beginners.",
+    "Complete guide: how to buy any Udemy course from Bangladesh — with bKash, Nagad, Rocket or a dollar card. Works with or without a dollar card. Step-by-step for beginners in BD.",
   alternates: { canonical: `${siteConfig.domain}/how-to-buy` },
   openGraph: {
     title: "How to Buy Udemy Course in Bangladesh (2026)",
@@ -36,7 +36,7 @@ const howToFaqs = [
   {
     question: "Is it safe to buy Udemy courses through your service?",
     answer:
-      "Yes, completely safe. We are an official Udemy affiliate partner with 1000+ successful deliveries. Check our proofs page for real purchase screenshots.",
+      "Yes, completely safe. We are an official Udemy affiliate partner with 100+ successful deliveries. Check our proofs page for real purchase screenshots.",
   },
   {
     question: "Do I get an official Udemy certificate?",
@@ -180,11 +180,14 @@ export default function HowToBuyPage() {
           </h1>
           <div className="h-1 w-10 bg-purple-primary rounded-full mb-6" />
 
-          <p className="text-gray-text leading-relaxed mb-8">
+          <p className="text-gray-text leading-relaxed mb-4">
             Udemy requires a dollar or dual-currency card for direct payment —
             and most people in Bangladesh don&apos;t have one. The good news:
             there are two easy ways to buy any Udemy course from Bangladesh.
             Choose the method that suits you below.
+          </p>
+          <p className="text-gray-text leading-relaxed mb-8">
+            Whether you want to buy a Udemy course from Bangladesh with bKash, Nagad, or Rocket — or use a dollar card — this guide covers both. No credit card? No problem. Thousands of Bangladeshi learners buy Udemy courses this way every month.
           </p>
 
           {/* Quick pick */}

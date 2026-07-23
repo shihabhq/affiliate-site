@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
   // ── Description ─────────────────────────────────────────────────────
   description:
-    "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on web development, digital marketing, graphic design & more. 1000+ happy learners.",
+    "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on web development, digital marketing, graphic design & more. 100+ happy learners.",
 
   // ── Canonical & alternates ───────────────────────────────────────────
   alternates: { canonical: siteConfig.domain },
@@ -44,6 +44,8 @@ export const metadata: Metadata = {
   // ── Keywords (helps Bing, minor signal for Google) ──────────────────
   keywords: [
     "buy udemy course bangladesh",
+    "buy udemy course from bangladesh",
+    "buy udemy course in bangladesh",
     "udemy bkash payment",
     "udemy course bd",
     "how to buy udemy course in bangladesh",
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     url: siteConfig.domain,
     title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
     description:
-      "Pay with bKash, Nagad, Rocket — no dollar card needed. Web development, digital marketing, CPA marketing, freelancing & more. 1000+ happy learners.",
+      "Pay with bKash, Nagad, Rocket — no dollar card needed. Web development, digital marketing, CPA marketing, freelancing & more. 100+ happy learners.",
     images: [OG_IMAGE],
   },
 

@@ -29,11 +29,14 @@ export default function HeroSection() {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-3">
           Buy Udemy Courses
           <br />
-          <span className="text-gradient-purple">Up to 90% OFF</span>
+          <span className="text-gradient-purple">in Bangladesh</span>
         </h1>
+        <p className="text-white/80 text-lg sm:text-xl font-semibold mb-2">
+          Up to 90% OFF — bKash · Nagad · Rocket
+        </p>
 
         <p className="text-gray-300 text-base sm:text-lg mb-10 max-w-md mx-auto">
-          Top courses. Lifetime access. Certificate included.
+          Buy any Udemy course from Bangladesh — no dollar card needed. Pay with bKash, Nagad, or Rocket. Lifetime access + official certificate.
         </p>
 
         {/* Primary CTA — No card path (WhatsApp / Messenger) */}

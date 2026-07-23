@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
 
 const waLink = `${siteConfig.whatsappLink}?text=${encodeURIComponent(
-  "Hi! I want to buy a Udemy course with bKash. Can you help me?"
+  "Hi! I want to buy a Udemy course with bKash. Can you help me?",
 )}`;
 
 export default function FinalCTA() {
@@ -12,11 +12,10 @@ export default function FinalCTA() {
           Ready to Learn? Get Your Udemy Course Today!
         </h2>
         <p className="text-purple-100 mb-2 text-lg">
-          Join 1000+ learners in Bangladesh who are upskilling with Udemy courses.
+          Join 100+ learners in Bangladesh who are upskilling with Udemy
+          courses.
         </p>
-        <p className="text-purple-200 text-sm mb-8">
-          আজই শুরু করুন!
-        </p>
+        <p className="text-purple-200 text-sm mb-8">আজই শুরু করুন!</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={siteConfig.affiliateLink}

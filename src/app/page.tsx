@@ -16,7 +16,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash · Nagad · Rocket",
   description:
-    "Buy any Udemy course in Bangladesh — web development, digital marketing, graphic design, data science & more. Pay with bKash, Nagad, Rocket. No dollar card needed. Up to 90% off. 1000+ happy learners.",
+    "Buy any Udemy course in Bangladesh or from Bangladesh — web development, digital marketing, graphic design, data science & more. Pay with bKash, Nagad, Rocket. No dollar card needed. Up to 90% off.",
   alternates: { canonical: siteConfig.domain },
   openGraph: {
     title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",

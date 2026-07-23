@@ -95,7 +95,7 @@ Follow Udemy.com's visual language:
 ### Home page (`/`) sections, in order:
 
 1. **Hero:** Logo from `/assets/`, H1 = "Buy Udemy Courses in Bangladesh — Up to 90% OFF", subheading mentioning bKash/Nagad payment for users without a card. Two CTAs: "Get Discount on Udemy" (affiliate link) + "Buy with bKash" (opens purchase modal → WhatsApp/Messenger).
-2. **Trust bar:** "✔ Pay with bKash/Nagad/Rocket · ✔ Lifetime access · ✔ Certificate included · ✔ 1000+ happy learners" style strip.
+2. **Trust bar:** "✔ Pay with bKash/Nagad/Rocket · ✔ Lifetime access · ✔ Certificate included · ✔ 100+ happy learners" style strip.
 3. **Featured deals grid:** Course cards from `src/data/courses.ts` using images in `/courses/`. Each card opens the Purchase Modal (Section 7).
 4. **How it works:** 3-step visual — (1) Choose a course, (2) Have a card? Click "Get Discount" → Udemy. No card? Message us, (3) Pay with bKash & get the course on your email.
 5. **Payment methods section:** Show bKash, Nagad, Rocket, card icons (use assets from `/assets/` if present; otherwise text badges).

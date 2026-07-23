@@ -2,7 +2,7 @@ const trustItems = [
   { icon: "💳", text: "Pay with bKash / Nagad / Rocket" },
   { icon: "♾️", text: "Lifetime access guaranteed" },
   { icon: "🎓", text: "Certificate included" },
-  { icon: "👥", text: "1000+ happy learners" },
+  { icon: "👥", text: "100+ happy learners" },
   { icon: "⚡", text: "Fast delivery to email" },
 ];
 
