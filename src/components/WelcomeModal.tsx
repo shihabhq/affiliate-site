@@ -13,10 +13,26 @@ export default function WelcomeModal() {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Show after a short delay so the page settles first
+  // Show once per session — triggered by whichever comes first: 6s idle or first scroll.
+  // Delayed so LCP fires and paints before the modal is ever created in the DOM.
   useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 1200);
-    return () => clearTimeout(timer);
+    if (sessionStorage.getItem("ucb_welcome_shown")) return;
+
+    const show = () => {
+      setOpen(true);
+      sessionStorage.setItem("ucb_welcome_shown", "1");
+      cleanup();
+    };
+
+    const timer = setTimeout(show, 6000);
+    window.addEventListener("scroll", show, { once: true, passive: true });
+
+    const cleanup = () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", show);
+    };
+
+    return cleanup;
   }, []);
 
   // Focus the close button when modal opens
