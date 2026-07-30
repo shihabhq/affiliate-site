@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 type PurchaseModalProps = {
   isOpen: boolean;
@@ -152,14 +153,9 @@ export default function PurchaseModal({
             <p className="text-xs text-gray-text mb-3">
               Buy directly on Udemy with your international card and get up to 90% off.
             </p>
-            <a
-              href={siteConfig.affiliateLink}
-              target="_blank"
-              rel="sponsored noopener"
-              className="block w-full bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold py-3 px-4 rounded text-center transition-colors"
-            >
+            <AffiliateLink className="block w-full bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold py-3 px-4 rounded text-center transition-colors">
               Get up to 90% OFF on Udemy →
-            </a>
+            </AffiliateLink>
           </div>
         </div>
       </div>

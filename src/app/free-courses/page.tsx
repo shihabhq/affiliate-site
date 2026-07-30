@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import { courses } from "@/data/courses";
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 export const metadata: Metadata = {
   title: "Udemy Free Courses & Discounts in Bangladesh — Up to 90% OFF (2026)",
@@ -141,14 +142,9 @@ export default function FreeCoursesPage() {
                   the best available sale price (up to 90% off). Pay in USD
                   with your card.
                 </p>
-                <a
-                  href={siteConfig.affiliateLink}
-                  target="_blank"
-                  rel="sponsored noopener"
-                  className="block text-center bg-purple-primary hover:bg-purple-hover text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors"
-                >
+                <AffiliateLink className="block text-center bg-purple-primary hover:bg-purple-hover text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors">
                   Get Discount on Udemy →
-                </a>
+                </AffiliateLink>
               </div>
               <div className="bg-white border border-gray-border rounded-xl p-4">
                 <div className="text-2xl mb-2">📱</div>
@@ -299,14 +295,9 @@ export default function FreeCoursesPage() {
               90% off — right now.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href={siteConfig.affiliateLink}
-                target="_blank"
-                rel="sponsored noopener"
-                className="bg-purple-primary hover:bg-purple-hover text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors"
-              >
+              <AffiliateLink className="bg-purple-primary hover:bg-purple-hover text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
                 Get Discount on Udemy →
-              </a>
+              </AffiliateLink>
               <a
                 href={waLink}
                 target="_blank"

@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 const waLink = `${siteConfig.whatsappLink}?text=${encodeURIComponent(
   "Hi! I want to buy a Udemy course with bKash. Can you help me?",
@@ -17,14 +18,9 @@ export default function FinalCTA() {
         </p>
         <p className="text-purple-200 text-sm mb-8">আজই শুরু করুন!</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={siteConfig.affiliateLink}
-            target="_blank"
-            rel="sponsored noopener"
-            className="inline-block bg-white text-purple-primary font-bold text-base px-8 py-4 rounded hover:bg-gray-100 transition-colors"
-          >
+          <AffiliateLink className="inline-block bg-white text-purple-primary font-bold text-base px-8 py-4 rounded hover:bg-gray-100 transition-colors">
             Get Discount on Udemy →
-          </a>
+          </AffiliateLink>
           <a
             href={waLink}
             target="_blank"

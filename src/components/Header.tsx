@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
   { label: "How to Buy", href: "/how-to-buy" },
+  { label: "Blog", href: "/blog" },
   { label: "Proofs", href: "/proofs" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -48,14 +50,9 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <a
-              href={siteConfig.affiliateLink}
-              target="_blank"
-              rel="sponsored noopener"
-              className="bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold px-4 py-2 rounded transition-colors"
-            >
+            <AffiliateLink className="bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold px-4 py-2 rounded transition-colors">
               Get Discount
-            </a>
+            </AffiliateLink>
           </div>
 
           {/* Mobile hamburger */}
@@ -92,15 +89,12 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={siteConfig.affiliateLink}
-              target="_blank"
-              rel="sponsored noopener"
+            <AffiliateLink
               className="bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold px-4 py-2 rounded text-center mt-2 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               Get Discount on Udemy
-            </a>
+            </AffiliateLink>
           </nav>
         </div>
       )}

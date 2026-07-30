@@ -3,6 +3,7 @@ import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 export const metadata: Metadata = {
   title:
@@ -270,14 +271,9 @@ export default function HowToBuyPage() {
             </div>
 
             <div className="mt-5">
-              <a
-                href={siteConfig.affiliateLink}
-                target="_blank"
-                rel="sponsored noopener"
-                className="inline-block bg-purple-primary hover:bg-purple-hover text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              >
+              <AffiliateLink className="inline-block bg-purple-primary hover:bg-purple-hover text-white font-bold px-8 py-4 rounded-xl transition-colors">
                 Get Discount on Udemy →
-              </a>
+              </AffiliateLink>
             </div>
           </section>
 
@@ -459,14 +455,9 @@ export default function HowToBuyPage() {
               Choose your method and start learning today.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href={siteConfig.affiliateLink}
-                target="_blank"
-                rel="sponsored noopener"
-                className="bg-purple-primary hover:bg-purple-hover text-white font-bold px-6 py-3 rounded-xl text-center transition-colors text-sm"
-              >
+              <AffiliateLink className="bg-purple-primary hover:bg-purple-hover text-white font-bold px-6 py-3 rounded-xl text-center transition-colors text-sm">
                 Get Discount on Udemy →
-              </a>
+              </AffiliateLink>
               <a
                 href={waLink}
                 target="_blank"

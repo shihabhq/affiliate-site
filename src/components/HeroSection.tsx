@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 const waLink = `${siteConfig.whatsappLink}?text=${encodeURIComponent(
   "Hi! I want to buy a Udemy course. Can you help me?"
@@ -86,14 +87,9 @@ export default function HeroSection() {
         </div>
 
         {/* Secondary CTA — Has card (affiliate link) */}
-        <a
-          href={siteConfig.affiliateLink}
-          target="_blank"
-          rel="sponsored noopener"
-          className="inline-block bg-purple-primary hover:bg-purple-hover text-white font-bold text-base px-8 py-3 rounded-xl transition-colors mb-2"
-        >
+        <AffiliateLink className="inline-block bg-purple-primary hover:bg-purple-hover text-white font-bold text-base px-8 py-3 rounded-xl transition-colors mb-2">
           Get Discount on Udemy →
-        </a>
+        </AffiliateLink>
         <p className="text-xs text-gray-500 mb-10">
           ডুয়াল কারেন্সি কার্ড থাকলে সরাসরি Udemy থেকে ডিস্কাউন্টে কিনুন
         </p>

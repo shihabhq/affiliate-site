@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/config/site";
+import AffiliateLink from "@/components/AffiliateLink";
 
 const waLink = `${siteConfig.whatsappLink}?text=${encodeURIComponent(
   "Hi! I want to buy a Udemy course. Can you help me?"
@@ -140,15 +141,12 @@ export default function WelcomeModal() {
           </div>
 
           {/* Secondary CTA — affiliate link */}
-          <a
-            href={siteConfig.affiliateLink}
-            target="_blank"
-            rel="sponsored noopener"
+          <AffiliateLink
             onClick={() => setOpen(false)}
             className="block w-full bg-purple-primary/80 hover:bg-purple-hover text-white font-bold text-sm py-3 rounded-xl transition-colors"
           >
             Get Discount on Udemy →
-          </a>
+          </AffiliateLink>
         </div>
       </div>
     </div>
