@@ -13,7 +13,8 @@
       "Bash(cd:*)",
       "Bash(grep -r opengraph-image 'E:/Code V2/udemycourse/node_modules/next/dist/docs/01-app/' --include=*.md -l)",
       "Bash(python3 -c \"from PIL import Image; img = Image.open\\(''E:/Code V2/udemycourse/public/assets/OG.png''\\); print\\(img.size, img.format\\)\")",
-      "Bash(powershell -command \"Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(''E:/Code V2/udemycourse/public/assets/OG.png''\\); Write-Host $img.Width $img.Height\")"
+      "Bash(powershell -command \"Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(''E:/Code V2/udemycourse/public/assets/OG.png''\\); Write-Host $img.Width $img.Height\")",
+      "Bash(npx tsc:*)"
     ]
   }
 }

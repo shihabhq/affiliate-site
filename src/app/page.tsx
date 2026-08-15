@@ -52,6 +52,19 @@ const homeJsonLd = {
   about: { "@id": `${siteConfig.domain}/#organization` },
 };
 
+const homeFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.slice(0, 5).map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 const featuredCourses = courses.slice(0, 8);
 const previewProofs = proofs.slice(0, 6);
 const homeFaqs = faqs.slice(0, 5);
@@ -60,6 +73,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={homeJsonLd} />
+      <JsonLd data={homeFaqJsonLd} />
 
       {/* 1. Hero */}
       <HeroSection />

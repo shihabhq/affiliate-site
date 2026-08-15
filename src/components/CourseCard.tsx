@@ -61,7 +61,7 @@ export default function CourseCard({ course }: { course: Course }) {
         <div className="relative aspect-video w-full bg-gray-100">
           <Image
             src={course.image}
-            alt={`${course.title} — buy in Bangladesh with bKash`}
+            alt={course.title}
             fill
             className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

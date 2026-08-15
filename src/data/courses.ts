@@ -41,7 +41,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 280000,
     shortDescription:
-      "The only course you need to learn web development. HTML, CSS, JS, Node, MongoDB and more. Build real-world projects.",
+      "Colt Steele's bestselling bootcamp covering HTML, CSS, JavaScript, Node.js, and MongoDB. Perfect for Bangladeshi beginners who want job-ready full-stack skills without prior experience.",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
   },
   {
@@ -54,7 +54,7 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 95000,
     shortDescription:
-      "Build 100 projects in 100 days and become a web developer. Master HTML, CSS, JavaScript, React, Node.js and more.",
+      "A project-driven bootcamp where you build 100 real websites in 100 days. Highly popular among Bangladeshi freelancers who want a strong portfolio fast.",
     tags: ["HTML", "CSS", "JavaScript", "React", "Projects"],
   },
   {
@@ -68,7 +68,7 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 110000,
     shortDescription:
-      "The ultimate HTML and CSS course for beginners. Build stunning real-world websites with modern HTML5 and CSS3.",
+      "Jonas Schmedtmann's hands-on HTML/CSS course — builds real websites using Flexbox, Grid, and responsive design. A top choice for BD learners starting their web career.",
     tags: ["HTML5", "CSS3", "Responsive Design", "Flexbox", "Grid"],
   },
   {
@@ -81,7 +81,7 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 75000,
     shortDescription:
-      "Master modern React from beginner to advanced! Context API, React Query, Redux, Tailwind, advanced patterns.",
+      "The most up-to-date React course available — covers hooks, Context API, Redux, and React Query. Ideal for Bangladeshi developers targeting remote jobs or Upwork clients.",
     tags: ["React", "JavaScript", "Redux", "Hooks", "Context API"],
   },
   {
@@ -95,7 +95,7 @@ export const courses: Course[] = [
     rating: 4.5,
     reviewCount: 185000,
     shortDescription:
-      "Learn SEO, social media marketing, Facebook ads, Google ads, email marketing and more in one complete course.",
+      "27 courses in one: SEO, Facebook Ads, Google Ads, email marketing, and more. Widely used by Bangladeshi digital marketers and Fiverr freelancers to land clients.",
     tags: [
       "SEO",
       "Facebook Ads",
@@ -114,7 +114,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 88000,
     shortDescription:
-      "Master the principles of graphic design. Learn Photoshop, Illustrator, InDesign and create stunning visual designs.",
+      "Covers Photoshop, Illustrator, InDesign, and core design principles. Perfect for Bangladeshi students who want to work as graphic designers on Fiverr or local agencies.",
     tags: ["Photoshop", "Illustrator", "InDesign", "Typography", "Branding"],
   },
   {
@@ -127,7 +127,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 65000,
     shortDescription:
-      "Learn Figma from scratch and design professional UI/UX. Create websites, apps and prototypes.",
+      "Learn Figma from absolute zero — wireframes, components, prototypes, and handoff. One of the most in-demand skills for Bangladeshi UI/UX freelancers right now.",
     tags: ["Figma", "UI Design", "UX Design", "Prototyping", "Wireframing"],
   },
   {
@@ -141,7 +141,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 42000,
     shortDescription:
-      "Design and build beautiful websites. Learn Figma for design, Webflow for development, and get freelance clients.",
+      "A complete workflow from design to live website — Figma mockup, Webflow development, and freelancing strategy. Great for Bangladeshi designers who want to sell end-to-end web services.",
     tags: ["Figma", "Webflow", "Web Design", "Freelancing", "Portfolio"],
   },
   {
@@ -155,7 +155,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 130000,
     shortDescription:
-      "Complete Data Science training. Math, Statistics, Python, Advanced Statistics, Machine Learning, Deep Learning.",
+      "An A-to-Z data science programme covering Statistics, Python, Machine Learning, and Deep Learning. Highly valued for Bangladeshi professionals aiming at data analyst or ML engineer roles.",
     tags: [
       "Python",
       "Machine Learning",
@@ -175,7 +175,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 520000,
     shortDescription:
-      "Learn Python like a professional! Start from basics and go all the way to creating your own applications.",
+      "The most reviewed Python course on Udemy — covers fundamentals through OOP, scripting, and web scraping. A smart first step for Bangladeshi students entering tech or data fields.",
     tags: ["Python", "Programming", "OOP", "Scripting", "Automation"],
   },
   {
@@ -189,7 +189,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 28000,
     shortDescription:
-      "Become an AI Engineer. Learn LLMs, OpenAI API, LangChain, vector databases, RAG, AI agents and more.",
+      "Covers LLMs, OpenAI API, LangChain, RAG systems, and AI agents from scratch. An excellent choice for Bangladeshi developers who want to future-proof their career in the AI era.",
     tags: ["AI", "LLMs", "LangChain", "OpenAI", "Python"],
   },
   {
@@ -202,7 +202,7 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 12000,
     shortDescription:
-      "Master AI-powered coding with Claude. Learn to build coding agents, automate workflows and supercharge your dev productivity.",
+      "Learn to use Claude as a coding co-pilot — build agents, automate repetitive tasks, and ship projects faster. A productivity game-changer for Bangladeshi developers and freelancers.",
     tags: ["Claude AI", "AI Coding", "Agents", "Automation", "Productivity"],
   },
   {
@@ -215,7 +215,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 650000,
     shortDescription:
-      "Master Excel with this A-Z Microsoft Excel course. From beginner to advanced. Includes Pivot Tables, VLOOKUP, Macros.",
+      "Udemy's most enrolled Excel course — Pivot Tables, VLOOKUP, and Macros explained simply. Essential for Bangladeshi job seekers, accountants, and data entry professionals.",
     tags: ["Excel", "Pivot Tables", "VLOOKUP", "Macros", "Data Analysis"],
   },
   {
@@ -228,7 +228,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 120000,
     shortDescription:
-      "Become an Excel POWER USER! Master advanced formulas, functions, lookups and data tools that set you apart.",
+      "Deep-dive into advanced Excel: XLOOKUP, dynamic arrays, Power Query, and VBA macros. Great for Bangladeshi finance professionals and data analysts who already know the basics.",
     tags: ["Excel", "Advanced Formulas", "Functions", "Power Query", "VBA"],
   },
   {
@@ -241,7 +241,7 @@ export const courses: Course[] = [
     rating: 4.5,
     reviewCount: 115000,
     shortDescription:
-      "Learn Excel, Financial Modeling, Valuation, Accounting, the art of presenting and more. Become a top Financial Analyst.",
+      "Covers financial modeling, company valuation, and Excel for finance in one course. A strong credential for Bangladeshi banking, accounting, and MBA students.",
     tags: ["Finance", "Excel", "Financial Modeling", "Valuation", "Accounting"],
   },
   {
@@ -254,7 +254,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 95000,
     shortDescription:
-      "Learn Docker, Docker Compose, Multi-Container Projects, Deployment and all about Kubernetes from the ground up.",
+      "Hands-on Docker and Kubernetes training — containers, Compose files, and cloud deployment explained practically. Highly relevant for Bangladeshi developers targeting DevOps or cloud roles.",
     tags: ["Docker", "Kubernetes", "DevOps", "Containers", "Deployment"],
   },
   {
@@ -268,7 +268,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 215000,
     shortDescription:
-      "Pass the AWS Certified Solutions Architect Associate Certification SAA-C03. Complete course with practice exams.",
+      "Stéphane Maarek's SAA-C03 prep course with practice exams and hands-on labs. AWS certification dramatically increases earning potential for Bangladeshi cloud professionals.",
     tags: ["AWS", "Cloud", "DevOps", "Certification", "Solutions Architect"],
   },
   // --- Digital Marketing & SEO ---
@@ -282,7 +282,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 72000,
     shortDescription:
-      "Master SEO and keyword research. Learn on-page SEO, technical SEO, link building, and rank higher on Google.",
+      "A thorough SEO course covering keyword research, on-page optimisation, and link building with real examples. Highly in demand among Bangladeshi digital marketers and freelancers offering SEO services.",
     tags: ["SEO", "Keyword Research", "Google", "On-Page SEO", "Backlinks"],
   },
   // --- CPA Marketing ---
@@ -296,7 +296,7 @@ export const courses: Course[] = [
     rating: 4.5,
     reviewCount: 38000,
     shortDescription:
-      "Learn CPA marketing from scratch. Find CPA offers, drive traffic, earn commissions without a product. Perfect for Bangladeshi freelancers.",
+      "Step-by-step CPA marketing training — find offers, set up tracking, drive traffic, and earn commissions without creating a product. One of the most searched online income methods in Bangladesh.",
     tags: ["CPA Marketing", "Affiliate Marketing", "Traffic", "Monetization", "Freelancing"],
   },
   {
@@ -309,7 +309,7 @@ export const courses: Course[] = [
     rating: 4.4,
     reviewCount: 25000,
     shortDescription:
-      "Start earning online with CPA and affiliate marketing. No experience needed — learn to find offers, build funnels, and make money online.",
+      "Covers both CPA and affiliate marketing from zero — offers, funnels, traffic sources, and scaling. A practical roadmap for Bangladeshi beginners who want to earn online without a product.",
     tags: ["CPA", "Affiliate Marketing", "Make Money Online", "Funnels", "Traffic"],
   },
   // --- Freelancing ---
@@ -323,7 +323,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 58000,
     shortDescription:
-      "Start your freelancing career on Fiverr, Upwork, and more. Learn how to get clients, set prices, and earn online from Bangladesh.",
+      "A practical freelancing guide covering Fiverr, Upwork, profile optimisation, and client communication. Built for beginners in Bangladesh who want to start earning in USD from home.",
     tags: ["Freelancing", "Fiverr", "Upwork", "Work from Home", "Earn Online"],
   },
   {
@@ -336,7 +336,7 @@ export const courses: Course[] = [
     rating: 4.5,
     reviewCount: 31000,
     shortDescription:
-      "Learn how to create a winning Fiverr gig, rank on Fiverr search, and get your first order. The #1 Fiverr course for beginners in Bangladesh.",
+      "Covers gig creation, SEO for Fiverr search, pricing strategy, and getting that first order. Specifically useful for Bangladeshi beginners struggling to stand out on Fiverr.",
     tags: ["Fiverr", "Freelancing", "Gig Ranking", "Client Getting", "Online Income"],
   },
   // --- English Language ---
@@ -350,7 +350,7 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 95000,
     shortDescription:
-      "Improve your English speaking, pronunciation, and confidence. Perfect for job interviews, IELTS prep, and professional communication.",
+      "Structured speaking and pronunciation training that builds real confidence. Hugely popular among Bangladeshi students preparing for job interviews, IELTS, and client calls on Upwork.",
     tags: ["English Speaking", "Pronunciation", "IELTS", "Communication", "Fluency"],
   },
   {
@@ -363,7 +363,7 @@ export const courses: Course[] = [
     rating: 4.5,
     reviewCount: 61000,
     shortDescription:
-      "Master English grammar from beginner to advanced. Learn tenses, articles, prepositions, and write correct English with confidence.",
+      "Clears up tenses, articles, prepositions, and sentence structure from the ground up. A solid grammar foundation for Bangladeshi learners who want to write and communicate correctly in English.",
     tags: ["English Grammar", "Writing", "Communication", "IELTS", "Beginner"],
   },
 ];

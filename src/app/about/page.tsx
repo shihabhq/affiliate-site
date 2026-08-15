@@ -96,6 +96,26 @@ export default function AboutPage() {
             for full transparency.
           </p>
 
+          <h2 className="text-xl font-bold text-dark mt-8">How the Assisted-Purchase Process Works</h2>
+          <p>
+            We understand that sending money to a stranger online requires trust. Here is exactly how every transaction works, step by step:
+          </p>
+          <ol className="list-decimal list-inside space-y-2 mt-3">
+            <li><strong className="text-dark">You message us</strong> on WhatsApp or Facebook Messenger with the Udemy course name or link.</li>
+            <li><strong className="text-dark">We confirm the current BDT price</strong> based on the live Udemy sale. No hidden fees — what we quote is what you pay.</li>
+            <li><strong className="text-dark">You pay via bKash, Nagad, or Rocket</strong> to our verified mobile number. We share the payment details only after confirming the course and price.</li>
+            <li><strong className="text-dark">We purchase the course</strong> directly on Udemy using our account and then gift or transfer access to your Udemy account (you need a free Udemy account).</li>
+            <li><strong className="text-dark">You receive a confirmation email from Udemy</strong> within 1–6 hours with full lifetime access to the course.</li>
+          </ol>
+
+          <h2 className="text-xl font-bold text-dark mt-8">Our Refund & Delivery Guarantee</h2>
+          <p>
+            Your money is safe with us. If we are unable to deliver course access to your Udemy account for any reason after you have paid, we will refund the full amount to your bKash/Nagad/Rocket number — no questions asked. We have maintained a 100% delivery success rate since we started, and every transaction is backed by a delivery screenshot we share with you as proof.
+          </p>
+          <p className="mt-2">
+            We do not offer refunds after a course has been successfully delivered, as Udemy&apos;s own terms govern the course content and our role ends at delivery. If you have any concern about a delivered course, contact us and we will do our best to help.
+          </p>
+
           <h2 className="text-xl font-bold text-dark mt-8">
             Affiliate Disclosure
           </h2>
