@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { categories } from "@/data/courses";
 import { blogPosts } from "@/data/blog";
+import { siteConfig } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://udemycoursebd.com";
+  const base = siteConfig.domain;
 
   const staticRoutes: Array<{
     path: string;
