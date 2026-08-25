@@ -113,6 +113,7 @@ export default function CourseCard({ course }: { course: Course }) {
         onClose={() => setModalOpen(false)}
         courseTitle={course.title}
         courseThumbnail={course.image}
+        courseLink={course.link}
       />
     </>
   );

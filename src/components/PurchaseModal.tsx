@@ -10,6 +10,9 @@ type PurchaseModalProps = {
   onClose: () => void;
   courseTitle: string;
   courseThumbnail: string;
+  /** Course-specific Udemy affiliate link from src/data/courses.ts (e.g. "trk.udemy.com/xxxxx").
+   * Falls back to the site-wide affiliate link when not provided. */
+  courseLink?: string;
 };
 
 export default function PurchaseModal({
@@ -17,6 +20,7 @@ export default function PurchaseModal({
   onClose,
   courseTitle,
   courseThumbnail,
+  courseLink,
 }: PurchaseModalProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -52,6 +56,12 @@ export default function PurchaseModal({
   );
   const waLink = `${siteConfig.whatsappLink}?text=${waMessage}`;
   const fbLink = `${siteConfig.facebookMessage}?ref=course_${encodeURIComponent(courseTitle)}`;
+  // Course links in src/data/courses.ts are stored without a protocol (e.g. "trk.udemy.com/xxxxx").
+  const resolvedCourseLink = courseLink
+    ? /^https?:\/\//i.test(courseLink)
+      ? courseLink
+      : `https://${courseLink}`
+    : undefined;
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === overlayRef.current) onClose();
@@ -153,7 +163,10 @@ export default function PurchaseModal({
             <p className="text-xs text-gray-text mb-3">
               Buy directly on Udemy with your international card and get up to 90% off.
             </p>
-            <AffiliateLink className="block w-full bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold py-3 px-4 rounded text-center transition-colors">
+            <AffiliateLink
+              href={resolvedCourseLink}
+              className="block w-full bg-purple-primary hover:bg-purple-hover text-white text-sm font-semibold py-3 px-4 rounded text-center transition-colors"
+            >
               Get up to 90% OFF on Udemy →
             </AffiliateLink>
           </div>
