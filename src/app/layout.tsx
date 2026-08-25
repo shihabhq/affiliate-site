@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Hind_Siliguri } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -17,6 +17,16 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// Bengali-capable body font for blog posts written in Bangla (most of them).
+// Site chrome (nav, buttons, etc.) stays on Geist regardless — only a blog
+// post's article body switches to this, via the `font-bengali` utility,
+// when that post's frontmatter sets language: "bn".
+const hindSiliguri = Hind_Siliguri({
+  variable: "--font-bengali",
+  subsets: ["bengali", "latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const OG_IMAGE = {
@@ -148,7 +158,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {/* Google Analytics 4 */}
