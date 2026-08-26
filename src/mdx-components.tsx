@@ -11,15 +11,15 @@ import FinalCTA from "@/components/blog/FinalCTA";
 // <CourseCTA />, <OfferCTA />, <BlogImage />.
 const components: MDXComponents = {
   h2: ({ children }) => (
-    <h2 className="text-xl font-bold text-dark mt-10 mb-3 leading-snug">
+    <h2 className="text-2xl font-bold text-dark mt-10 mb-3 leading-snug">
       {children}
     </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="text-base font-bold text-dark mt-6 mb-2">{children}</h3>
+    <h3 className="text-lg font-bold text-dark mt-6 mb-2">{children}</h3>
   ),
   p: ({ children }) => (
-    <p className="text-gray-text leading-relaxed mb-4 text-[15px]">
+    <p className="text-gray-text leading-relaxed mb-4 text-[17px]">
       {children}
     </p>
   ),
@@ -27,18 +27,18 @@ const components: MDXComponents = {
     <ul className="space-y-2 mb-4 list-none pl-0">{children}</ul>
   ),
   ol: ({ children }) => (
-    <ol className="space-y-2 mb-4 list-decimal pl-5 text-gray-text text-[15px]">
+    <ol className="space-y-2 mb-4 list-decimal pl-5 text-gray-text text-[17px]">
       {children}
     </ol>
   ),
   li: ({ children }) => (
-    <li className="flex gap-2 text-gray-text text-[15px]">
+    <li className="flex gap-2 text-gray-text text-[17px]">
       <span className="text-green-price shrink-0 mt-1">✔</span>
       <span className="leading-relaxed">{children}</span>
     </li>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-4 border-purple-primary bg-bg-light rounded-r-lg px-4 py-3 mb-4 text-sm text-dark leading-relaxed">
+    <blockquote className="border-l-4 border-purple-primary bg-bg-light rounded-r-lg px-4 py-3 mb-4 text-base text-dark leading-relaxed">
       {children}
     </blockquote>
   ),

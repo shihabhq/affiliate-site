@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import BodyEditor from "./BodyEditor";
 
 type PostListItem = { slug: string; title: string; date: string };
 
@@ -52,7 +53,6 @@ export default function BlogEditorClient() {
   const [isEditingExisting, setIsEditingExisting] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  const bodyRef = useRef<HTMLTextAreaElement>(null);
 
   const refreshPosts = () => {
     fetch("/api/dev/posts")
@@ -95,21 +95,6 @@ export default function BlogEditorClient() {
     setStatus(null);
   };
 
-  const insertSnippet = (snippet: string) => {
-    const el = bodyRef.current;
-    if (!el) {
-      setForm((f) => ({ ...f, body: `${f.body}\n\n${snippet}\n` }));
-      return;
-    }
-    const { selectionStart, selectionEnd, value } = el;
-    const next =
-      value.slice(0, selectionStart) +
-      `\n${snippet}\n` +
-      value.slice(selectionEnd);
-    setForm((f) => ({ ...f, body: next }));
-    requestAnimationFrame(() => el.focus());
-  };
-
   const uploadImage = async (
     file: File,
     kind: "cover" | "inline",
@@ -136,16 +121,6 @@ export default function BlogEditorClient() {
     if (!file) return;
     const path = await uploadImage(file, "cover");
     if (path) setForm((f) => ({ ...f, coverImage: path }));
-    e.target.value = "";
-  };
-
-  const handleInlineUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const path = await uploadImage(file, "inline");
-    if (path) {
-      insertSnippet(`<BlogImage src="${path}" alt="..." caption="..." />`);
-    }
     e.target.value = "";
   };
 
@@ -382,46 +357,12 @@ export default function BlogEditorClient() {
           </div>
 
           <Field label="Body (Markdown / MDX)">
-            <div className="flex flex-wrap gap-2 mb-2">
-              <SnippetButton
-                label="+ Inline image"
-                onClick={() => document.getElementById("inline-upload")?.click()}
-              />
-              <input
-                id="inline-upload"
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={handleInlineUpload}
-              />
-              <SnippetButton
-                label="+ CourseCTA"
-                onClick={() =>
-                  insertSnippet(
-                    '<CourseCTA courseId="web-dev-bootcamp" note="..." />',
-                  )
-                }
-              />
-              <SnippetButton
-                label="+ OfferCTA"
-                onClick={() =>
-                  insertSnippet(
-                    '<OfferCTA title="..." image="/courses/xxx.png" link="trk.udemy.com/xxxxx" note="..." />',
-                  )
-                }
-              />
-              <SnippetButton
-                label="+ FinalCTA"
-                onClick={() => insertSnippet("<FinalCTA />")}
-              />
-            </div>
-            <textarea
-              ref={bodyRef}
-              className="input font-mono"
-              rows={18}
+            <BodyEditor
               value={form.body}
-              onChange={(e) => setForm((f) => ({ ...f, body: e.target.value }))}
-              placeholder={"লেখা শুরু করুন...\n\n## একটি সেকশন\n\nবাংলায় লিখুন।"}
+              onChange={(body) => setForm((f) => ({ ...f, body }))}
+              slug={form.slug}
+              onUploadInlineImage={(file) => uploadImage(file, "inline")}
+              onStatus={setStatus}
             />
           </Field>
         </main>
@@ -453,29 +394,17 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <label className="block">
+    // Plain div, not <label> — a <label> forwards clicks anywhere inside it
+    // to the first form control it contains, which broke BodyEditor's hidden
+    // file input (clicking into the CodeMirror editor was opening the native
+    // file picker). Simple single-input fields don't need the label wrap
+    // either; the visible text above is enough.
+    <div className="block">
       <span className="block text-xs font-semibold text-gray-text mb-1">
         {label}
       </span>
       {children}
-    </label>
+    </div>
   );
 }
 
-function SnippetButton({
-  label,
-  onClick,
-}: {
-  label: string;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="text-xs bg-bg-light border border-gray-border hover:border-purple-primary px-3 py-1.5 rounded-md transition-colors"
-    >
-      {label}
-    </button>
-  );
-}

@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           <h1
-            className={`text-3xl sm:text-4xl font-bold text-dark tracking-tight mb-6 leading-tight ${
+            className={`text-4xl sm:text-5xl font-bold text-dark tracking-tight mb-6 leading-tight ${
               metadata.language === "bn" ? "font-bengali" : ""
             }`}
           >
