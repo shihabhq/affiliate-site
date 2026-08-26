@@ -11,16 +11,20 @@ interface AffiliateLinkProps {
   children: React.ReactNode;
   /** Optional click handler — use to close modals/drawers after the link is tapped */
   onClick?: () => void;
+  /** Optional course-specific affiliate link (e.g. a course's own trk.udemy.com link).
+   * Falls back to the site-wide affiliateLink when not provided. */
+  href?: string;
 }
 
 export default function AffiliateLink({
   className,
   children,
   onClick,
+  href,
 }: AffiliateLinkProps) {
   return (
     <a
-      href={siteConfig.affiliateLink}
+      href={href || siteConfig.affiliateLink}
       target="_blank"
       rel="sponsored nofollow noopener"
       className={className}

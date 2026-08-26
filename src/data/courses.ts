@@ -14,6 +14,7 @@ export type Course = {
   rating: number;
   reviewCount: number;
   shortDescription: string;
+  link: string;
   tags: string[];
 };
 
@@ -35,6 +36,7 @@ export const courses: Course[] = [
     id: "web-dev-bootcamp",
     title: "The Web Developer Bootcamp",
     slug: "the-web-developer-bootcamp",
+    link: "trk.udemy.com/n4eZQM",
     category: "web-development",
     image: "/courses/The-web-developer-bootcamp.png",
     originalPrice: "$199.99",
@@ -48,6 +50,7 @@ export const courses: Course[] = [
     id: "100-days-code",
     title: "100 Days Of Code — Web Development Bootcamp",
     slug: "100-days-of-code-web-development-bootcamp",
+    link: "trk.udemy.com/NGYvq1",
     category: "web-development",
     image: "/courses/100 Days Of Code - Web Development Bootcamp.png",
     originalPrice: "$189.99",
@@ -62,6 +65,7 @@ export const courses: Course[] = [
     title: "Build Responsive Real-World Websites with HTML and CSS",
     slug: "build-responsive-real-world-websites-html-css",
     category: "web-development",
+    link: "trk.udemy.com/VOjvXj",
     image:
       "/courses/Build Responsive Real-World Websites with HTML and CSS.png",
     originalPrice: "$149.99",
@@ -74,6 +78,7 @@ export const courses: Course[] = [
   {
     id: "ultimate-react-2025",
     title: "The Ultimate React Course 2025",
+    link: "trk.udemy.com/ZVevWz",
     slug: "the-ultimate-react-course-2025",
     category: "web-development",
     image: "/courses/The Ultimate React Course 2025.png",
@@ -89,6 +94,7 @@ export const courses: Course[] = [
     title: "The Complete Digital Marketing Guide — 27 Courses in 1",
     slug: "the-complete-digital-marketing-guide-27-courses-in-1",
     category: "digital-marketing",
+    link: "trk.udemy.com/WOPvoe",
     image:
       "/courses/The Complete Digital Marketing Guide - 27 Courses in 1.png",
     originalPrice: "$199.99",
@@ -110,6 +116,7 @@ export const courses: Course[] = [
     slug: "graphic-design-masterclass-learn-great-design",
     category: "graphic-design",
     image: "/courses/Graphic Design Masterclass - Learn GREAT Design.png",
+    link: "trk.udemy.com/OYLvAP",
     originalPrice: "$199.99",
     rating: 4.6,
     reviewCount: 88000,
@@ -123,6 +130,7 @@ export const courses: Course[] = [
     slug: "figma-ui-ux-design-essentials",
     category: "graphic-design",
     image: "/courses/Figma UI UX Design Essentials.png",
+    link: "trk.udemy.com/yZxPNG",
     originalPrice: "$149.99",
     rating: 4.7,
     reviewCount: 65000,
@@ -135,6 +143,7 @@ export const courses: Course[] = [
     title: "Complete Web Design from Figma to Webflow to Freelancing",
     slug: "complete-web-design-figma-webflow-freelancing",
     category: "graphic-design",
+    link: "trk.udemy.com/9VBjkE",
     image:
       "/courses/Complete Web Design from Figma to Webflow to Freelancing.png",
     originalPrice: "$199.99",
@@ -151,6 +160,7 @@ export const courses: Course[] = [
     category: "data-science",
     image:
       "/courses/The Data Science Course Complete Data Science Bootcamp 2026.png",
+    link: "trk.udemy.com/k4P16V",
     originalPrice: "$199.99",
     rating: 4.6,
     reviewCount: 130000,
@@ -172,6 +182,7 @@ export const courses: Course[] = [
     image:
       "/courses/The Complete Python Bootcamp From Zero to Hero in Python.png",
     originalPrice: "$149.99",
+    link: "trk.udemy.com/9VBjkj",
     rating: 4.6,
     reviewCount: 520000,
     shortDescription:
@@ -182,6 +193,7 @@ export const courses: Course[] = [
     id: "ai-engineer-bootcamp",
     title: "The AI Engineer Course 2026 — Complete AI Engineer Bootcamp",
     slug: "the-ai-engineer-course-2026-complete-bootcamp",
+    link: "trk.udemy.com/GbY4W9",
     category: "programming",
     image:
       "/courses/The AI Engineer Course 2026 Complete AI Engineer Bootcamp.png",
@@ -199,6 +211,7 @@ export const courses: Course[] = [
     category: "programming",
     image: "/courses/AI-coder-complete-claude-code-coding-agent-course.png",
     originalPrice: "$149.99",
+    link: "trk.udemy.com/WOPv5Z",
     rating: 4.8,
     reviewCount: 12000,
     shortDescription:
@@ -208,6 +221,7 @@ export const courses: Course[] = [
   {
     id: "excel-beginner-to-advanced",
     title: "Microsoft Excel — Excel from Beginner to Advanced",
+    link: "trk.udemy.com/6kRQJV",
     slug: "microsoft-excel-from-beginner-to-advanced",
     category: "excel-finance",
     image: "/courses/Microsoft Excel - Excel from Beginner to Advanced.png",
@@ -222,6 +236,7 @@ export const courses: Course[] = [
     id: "excel-advanced-formulas",
     title: "Microsoft Excel Advanced Excel Formulas & Functions",
     slug: "microsoft-excel-advanced-formulas-functions",
+    link: "trk.udemy.com/dyqPmq",
     category: "excel-finance",
     image: "/courses/Microsoft Excel Advanced Excel Formulas & Functions.png",
     originalPrice: "$129.99",
@@ -235,6 +250,7 @@ export const courses: Course[] = [
     id: "financial-analyst",
     title: "The Complete Financial Analyst Course 2026",
     slug: "the-complete-financial-analyst-course-2026",
+    link: "trk.udemy.com/yZxP7v",
     category: "excel-finance",
     image: "/courses/The Complete Financial Analyst Course 2026.png",
     originalPrice: "$199.99",
@@ -245,23 +261,11 @@ export const courses: Course[] = [
     tags: ["Finance", "Excel", "Financial Modeling", "Valuation", "Accounting"],
   },
   {
-    id: "docker-kubernetes",
-    title: "Docker & Kubernetes: The Practical Guide",
-    slug: "docker-and-kubernetes-the-practical-guide",
-    category: "devops",
-    image: "/courses/Docker & Kubernetes The Practical Guide.png",
-    originalPrice: "$199.99",
-    rating: 4.7,
-    reviewCount: 95000,
-    shortDescription:
-      "Hands-on Docker and Kubernetes training — containers, Compose files, and cloud deployment explained practically. Highly relevant for Bangladeshi developers targeting DevOps or cloud roles.",
-    tags: ["Docker", "Kubernetes", "DevOps", "Containers", "Deployment"],
-  },
-  {
     id: "aws-solutions-architect",
     title: "Ultimate AWS Certified Solutions Architect Associate 2026",
     slug: "ultimate-aws-certified-solutions-architect-associate-2026",
     category: "devops",
+    link: "trk.udemy.com/jRjGvv",
     image:
       "/courses/Ultimate AWS Certified Solutions Architect Associate 2026.png",
     originalPrice: "$199.99",
@@ -271,100 +275,101 @@ export const courses: Course[] = [
       "Stéphane Maarek's SAA-C03 prep course with practice exams and hands-on labs. AWS certification dramatically increases earning potential for Bangladeshi cloud professionals.",
     tags: ["AWS", "Cloud", "DevOps", "Certification", "Solutions Architect"],
   },
-  // --- Digital Marketing & SEO ---
   {
-    id: "seo-keyword-research",
-    title: "SEO Training & Keyword Research Masterclass 2026",
-    slug: "seo-training-keyword-research-masterclass",
-    category: "digital-marketing",
-    image: "/courses/The Complete Digital Marketing Guide - 27 Courses in 1.png",
-    originalPrice: "$149.99",
-    rating: 4.6,
-    reviewCount: 72000,
+    id: "complete-wordpress-course",
+    title: "WordPress 2026: The Complete WordPress Website Course",
+    slug: "complete-wp-course",
+    category: "web-development",
+    image: "/courses/wordpress.webp",
+    link: "trk.udemy.com/aNZ9aW",
+    originalPrice: "$199.99",
+    rating: 4.7,
+    reviewCount: 215000,
     shortDescription:
-      "A thorough SEO course covering keyword research, on-page optimisation, and link building with real examples. Highly in demand among Bangladeshi digital marketers and freelancers offering SEO services.",
-    tags: ["SEO", "Keyword Research", "Google", "On-Page SEO", "Backlinks"],
+      "Tanzeel Ur Rehman's hands-on WordPress course covering 5 real projects, from personal sites to eCommerce with WooCommerce. A practical route to freelance web design income for Bangladeshi developers.",
+    tags: ["WordPress", "Web Design", "WooCommerce", "No-Code", "Elementor"],
   },
-  // --- CPA Marketing ---
   {
-    id: "cpa-marketing-complete",
-    title: "CPA Marketing Masterclass — Complete CPA Marketing Course",
-    slug: "cpa-marketing-masterclass-complete-course",
-    category: "cpa-marketing",
-    image: "/courses/The Complete Digital Marketing Guide - 27 Courses in 1.png",
+    id: "complete-data-analyst-bootcamp",
+    title: "Complete Data Analyst Bootcamp From Basics To Advanced",
+    slug: "complete-data-analyst-bootcamp-from-basics-to-advanced",
+    category: "data-science",
+    link: "trk.udemy.com/OYLv2Q",
+    image: "/courses/data-analyst.webp",
     originalPrice: "$199.99",
     rating: 4.5,
-    reviewCount: 38000,
+    reviewCount: 21616,
     shortDescription:
-      "Step-by-step CPA marketing training — find offers, set up tracking, drive traffic, and earn commissions without creating a product. One of the most searched online income methods in Bangladesh.",
-    tags: ["CPA Marketing", "Affiliate Marketing", "Traffic", "Monetization", "Freelancing"],
+      "Krish Naik's end-to-end bootcamp covering Python, SQL, Statistics, Power BI, Tableau and Feature Engineering with real capstone projects. A structured path into data analyst roles for Bangladeshi professionals.",
+    tags: ["Python", "SQL", "Power BI", "Statistics", "Data Analysis"],
   },
   {
-    id: "cpa-affiliate-zero-to-hero",
-    title: "Affiliate Marketing & CPA Marketing — Zero to Hero",
-    slug: "affiliate-marketing-cpa-zero-to-hero",
-    category: "cpa-marketing",
-    image: "/courses/The Complete Financial Analyst Course 2026.png",
-    originalPrice: "$149.99",
-    rating: 4.4,
-    reviewCount: 25000,
-    shortDescription:
-      "Covers both CPA and affiliate marketing from zero — offers, funnels, traffic sources, and scaling. A practical roadmap for Bangladeshi beginners who want to earn online without a product.",
-    tags: ["CPA", "Affiliate Marketing", "Make Money Online", "Funnels", "Traffic"],
-  },
-  // --- Freelancing ---
-  {
-    id: "freelancing-complete",
-    title: "Complete Freelancing Course — Work From Home & Earn Online",
-    slug: "complete-freelancing-course-work-from-home",
-    category: "freelancing",
-    image: "/courses/Complete Web Design from Figma to Webflow to Freelancing.png",
-    originalPrice: "$149.99",
+    id: "after-effects-cc-bootcamp",
+    title: "Adobe After Effects CC Bootcamp: Beginner to Advanced",
+    slug: "after-effects-cc-bootcamp",
+    category: "design",
+    link: "trk.udemy.com/KBYvnn",
+    image: "/courses/after-effects.webp",
+    originalPrice: "$199.99",
     rating: 4.6,
-    reviewCount: 58000,
+    reviewCount: 39777,
     shortDescription:
-      "A practical freelancing guide covering Fiverr, Upwork, profile optimisation, and client communication. Built for beginners in Bangladesh who want to start earning in USD from home.",
-    tags: ["Freelancing", "Fiverr", "Upwork", "Work from Home", "Earn Online"],
+      "Louay Zambarakji's hands-on bootcamp covering Motion Graphics, VFX Compositing, and 3D animation with 55+ real world projects. A strong skill set for freelance video and design work from Bangladesh.",
+    tags: [
+      "After Effects",
+      "Motion Graphics",
+      "VFX",
+      "Animation",
+      "Compositing",
+    ],
   },
   {
-    id: "fiverr-success",
-    title: "Fiverr Freelancing — Rank Your Gig & Get Orders Fast",
-    slug: "fiverr-freelancing-rank-gig-get-orders",
-    category: "freelancing",
-    image: "/courses/The Complete Financial Analyst Course 2026.png",
-    originalPrice: "$99.99",
+    id: "sap-s4hana-mm-sourcing-procurement",
+    title: "SAP S/4HANA Sourcing & Procurement (MM-Materials Management)",
+    slug: "sap-s4hana-mm-sourcing-and-procurement",
+    category: "business",
+    link: "trk.udemy.com/PzqvLz",
+    image: "/courses/SAP.webp",
+    originalPrice: "$199.99",
     rating: 4.5,
-    reviewCount: 31000,
+    reviewCount: 8684,
     shortDescription:
-      "Covers gig creation, SEO for Fiverr search, pricing strategy, and getting that first order. Specifically useful for Bangladeshi beginners struggling to stand out on Fiverr.",
-    tags: ["Fiverr", "Freelancing", "Gig Ranking", "Client Getting", "Online Income"],
-  },
-  // --- English Language ---
-  {
-    id: "english-speaking-masterclass",
-    title: "English Speaking Masterclass — Speak English Fluently",
-    slug: "english-speaking-masterclass-speak-fluently",
-    category: "english-language",
-    image: "/courses/The Complete Python Bootcamp From Zero to Hero in Python.png",
-    originalPrice: "$129.99",
-    rating: 4.6,
-    reviewCount: 95000,
-    shortDescription:
-      "Structured speaking and pronunciation training that builds real confidence. Hugely popular among Bangladeshi students preparing for job interviews, IELTS, and client calls on Upwork.",
-    tags: ["English Speaking", "Pronunciation", "IELTS", "Communication", "Fluency"],
+      "Rana W Mehmood's configuration and end-user course covering the full P2P cycle, Fiori apps, and S/4HANA MM certification prep. A high-value ERP skill for Bangladeshis targeting corporate and consulting roles.",
+    tags: ["SAP", "S/4HANA", "MM", "Procurement", "ERP"],
   },
   {
-    id: "english-grammar-complete",
-    title: "Complete English Grammar Course — Beginner to Advanced",
-    slug: "complete-english-grammar-course-beginner-to-advanced",
-    category: "english-language",
-    image: "/courses/The Data Science Course Complete Data Science Bootcamp 2026.png",
-    originalPrice: "$99.99",
+    id: "complete-web-development-course",
+    title: "Complete Web Development Course",
+    slug: "web-dev-master",
+    category: "web-development",
+    link: "trk.udemy.com/DWMZEn",
+    image: "/courses/web-dev.webp",
+    originalPrice: "$199.99",
     rating: 4.5,
-    reviewCount: 61000,
+    reviewCount: 22322,
     shortDescription:
-      "Clears up tenses, articles, prepositions, and sentence structure from the ground up. A solid grammar foundation for Bangladeshi learners who want to write and communicate correctly in English.",
-    tags: ["English Grammar", "Writing", "Communication", "IELTS", "Beginner"],
+      "Hitesh Choudhary's full-stack roadmap covering HTML, CSS, Tailwind, JavaScript, Node, React, MongoDB, Prisma and deployment with lifetime updates. A direct match for the stack Bangladeshi full-stack developers need to freelance or land junior roles.",
+    tags: ["JavaScript", "React", "Node.js", "MongoDB", "Full Stack"],
+  },
+  {
+    id: "adobe-illustrator-essentials",
+    title: "Adobe Illustrator CC - Essentials Training Course",
+    slug: "adobe-illustrator-course",
+    category: "design",
+    link: "trk.udemy.com/enx5oj",
+    image: "/courses/illustrator.webp",
+    originalPrice: "$199.99",
+    rating: 4.7,
+    reviewCount: 33037,
+    shortDescription:
+      "Daniel Walter Scott's beginner-friendly course covering logo design, typography, and Illustrator's Generative AI tools through 30+ portfolio-ready projects. A solid entry point for Bangladeshi freelancers building graphic design income.",
+    tags: [
+      "Illustrator",
+      "Graphic Design",
+      "Logo Design",
+      "Vector Art",
+      "Adobe",
+    ],
   },
 ];
 
@@ -467,8 +472,7 @@ export const faqs = [
   },
   {
     question: "What categories of courses are available?",
-    answer:
-      "We offer all the courses Available on Udemy."
+    answer: "We offer all the courses Available on Udemy.",
   },
   {
     question: "How much discount will I get on Udemy courses?",
@@ -496,7 +500,8 @@ export const faqs = [
       "Legitimate 100% off coupon codes for premium Udemy courses are very rare and expire within hours. Instead of chasing expired coupons, use our service: during Udemy sales, top courses go down to $10–$15 (around ৳1,000–৳1,500 BDT). Message us on WhatsApp and we'll share the best current price.",
   },
   {
-    question: "Can I learn CPA marketing through Udemy? Available in Bangladesh?",
+    question:
+      "Can I learn CPA marketing through Udemy? Available in Bangladesh?",
     answer:
       "Yes! Udemy has excellent CPA marketing courses that teach you how to earn online through cost-per-action marketing. These are very popular with Bangladeshi freelancers. You can buy any CPA marketing Udemy course through our service — pay with bKash, Nagad, or Rocket. Just message us with the course name.",
   },

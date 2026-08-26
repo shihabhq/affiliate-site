@@ -1,129 +1,42 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
-import { blogPosts, type BlogSection } from "@/data/blog";
+import { getBlogSlugs, getPostBySlug, displayTitleOf } from "@/lib/blog";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
-import AffiliateLink from "@/components/AffiliateLink";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+export function generateStaticParams() {
+  return getBlogSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
   if (!post) return {};
+  const { metadata } = post;
+
   return {
-    title: post.title,
-    description: post.description,
-    alternates: { canonical: `${siteConfig.domain}/blog/${post.slug}` },
+    title: metadata.title,
+    description: metadata.description,
+    alternates: { canonical: `${siteConfig.domain}/blog/${slug}` },
     openGraph: {
-      title: post.title,
-      description: post.description,
-      url: `${siteConfig.domain}/blog/${post.slug}`,
+      title: metadata.title,
+      description: metadata.description,
+      url: `${siteConfig.domain}/blog/${slug}`,
       type: "article",
-      publishedTime: post.date,
-      images: [{ url: "/assets/OG.png", width: 1904, height: 982 }],
+      publishedTime: metadata.date,
+      images: [{ url: metadata.coverImage, width: 1200, height: 675 }],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
-      images: ["/assets/OG.png"],
+      title: metadata.title,
+      description: metadata.description,
+      images: [metadata.coverImage],
     },
   };
-}
-
-const waLink = `${siteConfig.whatsappLink}?text=${encodeURIComponent(
-  "Hi! I want to buy a Udemy course with bKash. Can you help me?",
-)}`;
-
-function Section({ section, i }: { section: BlogSection; i: number }) {
-  switch (section.type) {
-    case "h2":
-      return (
-        <h2
-          key={i}
-          className="text-xl font-bold text-dark mt-10 mb-3 leading-snug"
-        >
-          {section.text}
-        </h2>
-      );
-    case "h3":
-      return (
-        <h3 key={i} className="text-base font-bold text-dark mt-6 mb-2">
-          {section.text}
-        </h3>
-      );
-    case "p":
-      return (
-        <p key={i} className="text-gray-text leading-relaxed mb-4 text-[15px]">
-          {section.text}
-        </p>
-      );
-    case "ul":
-      return (
-        <ul key={i} className="space-y-2 mb-4">
-          {section.items.map((item, j) => (
-            <li key={j} className="flex gap-2 text-gray-text text-[15px]">
-              <span className="text-green-price shrink-0 mt-1">✔</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      );
-    case "ol":
-      return (
-        <ol key={i} className="space-y-3 mb-4">
-          {section.items.map((item, j) => (
-            <li key={j} className="flex gap-3 text-gray-text text-[15px]">
-              <span className="shrink-0 w-6 h-6 bg-purple-primary text-white rounded-md flex items-center justify-center text-xs font-bold mt-0.5">
-                {j + 1}
-              </span>
-              <span className="leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ol>
-      );
-    case "tip":
-      return (
-        <div
-          key={i}
-          className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-4 text-sm text-yellow-900 leading-relaxed"
-        >
-          <strong className="font-bold">Tip: </strong>
-          {section.text}
-        </div>
-      );
-    case "cta":
-      return (
-        <div
-          key={i}
-          className="bg-dark text-white rounded-2xl p-7 text-center my-10"
-        >
-          <p className="font-bold text-lg mb-2">Ready to start learning?</p>
-          <p className="text-gray-400 text-sm mb-5">
-            Buy any Udemy course in Bangladesh — with a card or with bKash.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <AffiliateLink className="bg-purple-primary hover:bg-purple-hover text-white font-bold px-6 py-3 rounded-xl text-sm text-center transition-colors">
-              Get Discount on Udemy →
-            </AffiliateLink>
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-whatsapp text-white font-bold px-6 py-3 rounded-xl text-sm text-center hover:opacity-90 transition-opacity"
-            >
-              Buy with bKash via WhatsApp
-            </a>
-          </div>
-        </div>
-      );
-  }
 }
 
 function formatDate(iso: string) {
@@ -136,21 +49,23 @@ function formatDate(iso: string) {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
+
+  const { Post, metadata } = post;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
+    headline: displayTitleOf(metadata),
+    description: metadata.description,
+    datePublished: metadata.date,
+    dateModified: metadata.date,
     author: { "@id": `${siteConfig.domain}/#organization` },
     publisher: { "@id": `${siteConfig.domain}/#organization` },
-    url: `${siteConfig.domain}/blog/${post.slug}`,
-    image: `${siteConfig.domain}/assets/OG.png`,
-    inLanguage: "en-BD",
+    url: `${siteConfig.domain}/blog/${slug}`,
+    image: `${siteConfig.domain}${metadata.coverImage}`,
+    inLanguage: metadata.language === "bn" ? "bn" : "en-BD",
   };
 
   return (
@@ -168,28 +83,41 @@ export default async function BlogPostPage({ params }: Props) {
               Blog
             </Link>
             {" / "}
-            <span className="text-dark font-medium">{post.category}</span>
+            <span className="text-dark font-medium">{metadata.category}</span>
           </nav>
 
           {/* Meta */}
           <div className="flex items-center gap-3 mb-4 text-xs text-gray-text flex-wrap">
             <span className="bg-bg-light border border-gray-border px-2 py-0.5 rounded-full font-medium">
-              {post.category}
+              {metadata.category}
             </span>
-            <time dateTime={post.date}>{formatDate(post.date)}</time>
-            <span>{post.readTime}</span>
+            <time dateTime={metadata.date}>{formatDate(metadata.date)}</time>
+            <span>{metadata.readTime}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-dark tracking-tight mb-4 leading-tight">
-            {post.title}
+          <h1
+            className={`text-4xl sm:text-5xl font-bold text-dark tracking-tight mb-6 leading-tight ${
+              metadata.language === "bn" ? "font-bengali" : ""
+            }`}
+          >
+            {displayTitleOf(metadata)}
           </h1>
-          <div className="h-1 w-10 bg-purple-primary rounded-full mb-8" />
 
-          {/* Content */}
-          <div>
-            {post.sections.map((section, i) => (
-              <Section key={i} section={section} i={i} />
-            ))}
+          {/* Cover image — 16:9 */}
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-gray-100 mb-8">
+            <Image
+              src={metadata.coverImage}
+              alt={metadata.coverImageAlt}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
+
+          {/* Content — Bengali font applied only when the post is written in Bangla */}
+          <div className={metadata.language === "bn" ? "font-bengali" : undefined}>
+            <Post />
           </div>
 
           {/* Back to blog */}
