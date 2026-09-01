@@ -1,6 +1,7 @@
 "use client";
 
 import { courses } from "@/data/courses";
+import { getCourseImageAlt } from "@/lib/categories";
 import InlineOfferCard from "./InlineOfferCard";
 
 type CourseCTAProps = {
@@ -30,6 +31,7 @@ export default function CourseCTA({ courseId, note, buttonLabel }: CourseCTAProp
     <InlineOfferCard
       title={course.title}
       image={course.image}
+      imageAlt={getCourseImageAlt(course)}
       link={course.link}
       note={note}
       buttonLabel={buttonLabel}

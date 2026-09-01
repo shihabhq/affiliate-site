@@ -373,6 +373,20 @@ export const courses: Course[] = [
   },
 ];
 
+// Pilot batch of course `id`s that get a dedicated detail page at
+// /courses/[category]/[slug] (see src/app/courses/[category]/[slug]/page.tsx and
+// src/data/courseDetails.ts). Keep this list in sync with courseDetails.ts —
+// every id here must have a matching entry there, and vice versa. Add more ids
+// here (and write matching content in courseDetails.ts) to expand the rollout.
+export const detailPageCourseIds: string[] = [
+  "web-dev-bootcamp",
+  "complete-digital-marketing",
+  "excel-beginner-to-advanced",
+  "python-bootcamp",
+  "graphic-design-masterclass",
+  "data-science-bootcamp",
+];
+
 // Proof image filenames from public/proofs/ — prefixed with /proofs/ at render time
 export const proofs: string[] = [
   "agile management.jpg",

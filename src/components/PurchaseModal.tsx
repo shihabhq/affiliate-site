@@ -10,6 +10,9 @@ type PurchaseModalProps = {
   onClose: () => void;
   courseTitle: string;
   courseThumbnail: string;
+  /** Keyword-rich alt text for the thumbnail (see getCourseImageAlt). Falls back
+   * to the bare course title when not provided (e.g. for non-catalog blog offers). */
+  courseImageAlt?: string;
   /** Course-specific Udemy affiliate link from src/data/courses.ts (e.g. "trk.udemy.com/xxxxx").
    * Falls back to the site-wide affiliate link when not provided. */
   courseLink?: string;
@@ -20,6 +23,7 @@ export default function PurchaseModal({
   onClose,
   courseTitle,
   courseThumbnail,
+  courseImageAlt,
   courseLink,
 }: PurchaseModalProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -86,7 +90,7 @@ export default function PurchaseModal({
             <div className="relative w-16 h-12 shrink-0 rounded overflow-hidden bg-gray-100">
               <Image
                 src={courseThumbnail}
-                alt={courseTitle}
+                alt={courseImageAlt ?? courseTitle}
                 fill
                 className="object-cover"
                 sizes="64px"

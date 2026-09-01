@@ -7,21 +7,9 @@ import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import { courses, categories } from "@/data/courses";
 import { siteConfig } from "@/config/site";
+import { categoryLabels } from "@/lib/categories";
 
 type Props = { params: Promise<{ category: string }> };
-
-const categoryLabels: Record<string, string> = {
-  "web-development": "Web Development",
-  "digital-marketing": "Digital Marketing",
-  "graphic-design": "Graphic Design",
-  "data-science": "Data Science",
-  "english-language": "English Language",
-  freelancing: "Freelancing",
-  programming: "Programming",
-  "excel-finance": "Excel & Finance",
-  devops: "DevOps & Cloud",
-  "cpa-marketing": "CPA Marketing",
-};
 
 const categoryDescriptions: Record<string, string> = {
   "web-development":
@@ -437,6 +425,7 @@ export default async function CategoryPage({ params }: Props) {
           </nav>
 
           <SectionHeading
+            as="h1"
             title={`${label} Courses in Bangladesh — Up to 90% OFF`}
             subtitle={
               categoryDescriptions[category] ||

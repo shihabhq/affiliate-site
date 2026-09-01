@@ -9,6 +9,9 @@ type InlineOfferCardProps = {
   image: string;
   /** Course-specific affiliate link, e.g. "trk.udemy.com/xxxxx" */
   link: string;
+  /** Keyword-rich alt text (see getCourseImageAlt). Falls back to `title` for
+   * offers that aren't a catalog course (e.g. <OfferCTA /> bundles). */
+  imageAlt?: string;
   /** Optional short note shown under the title (Bangla is fine) */
   note?: string;
   /** Label on the button — defaults to Bangla, override for an English post */
@@ -22,6 +25,7 @@ export default function InlineOfferCard({
   title,
   image,
   link,
+  imageAlt,
   note,
   buttonLabel = "এই কোর্সটি নিন",
 }: InlineOfferCardProps) {
@@ -33,7 +37,7 @@ export default function InlineOfferCard({
         <div className="relative w-20 h-14 shrink-0 rounded-lg overflow-hidden bg-white">
           <Image
             src={image}
-            alt={title}
+            alt={imageAlt ?? title}
             fill
             className="object-cover"
             sizes="80px"
@@ -58,6 +62,7 @@ export default function InlineOfferCard({
         onClose={() => setOpen(false)}
         courseTitle={title}
         courseThumbnail={image}
+        courseImageAlt={imageAlt}
         courseLink={link}
       />
     </>
