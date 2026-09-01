@@ -3,19 +3,8 @@
 import { useState } from "react";
 import type { Course } from "@/data/courses";
 import { categories } from "@/data/courses";
+import { categoryLabels } from "@/lib/categories";
 import CourseCard from "./CourseCard";
-
-const categoryLabels: Record<string, string> = {
-  "web-development": "Web Development",
-  "digital-marketing": "Digital Marketing",
-  "graphic-design": "Graphic Design",
-  "data-science": "Data Science",
-  "english-language": "English Language",
-  freelancing: "Freelancing",
-  programming: "Programming",
-  "excel-finance": "Excel & Finance",
-  devops: "DevOps & Cloud",
-};
 
 type Props = { courses: Course[] };
 

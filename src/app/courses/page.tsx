@@ -54,6 +54,7 @@ export default function CoursesPage() {
       <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
+            as="h1"
             title="All Udemy Courses — Up to 90% OFF"
             subtitle="Find the perfect Udemy course for you. Pay with bKash, Nagad, or Rocket — no dollar card needed."
           />

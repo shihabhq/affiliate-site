@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import type { Course } from "@/data/courses";
+import { detailPageCourseIds } from "@/data/courses";
+import { getCourseImageAlt } from "@/lib/categories";
 import PurchaseModal from "./PurchaseModal";
+
+const detailPageIds = new Set(detailPageCourseIds);
 
 function StarRating({ rating }: { rating: number }) {
   const fullStars = Math.floor(rating);
@@ -54,28 +59,43 @@ export default function CourseCard({ course }: { course: Course }) {
       ? `(${(course.reviewCount / 1000).toFixed(0)}k ratings)`
       : `(${course.reviewCount} ratings)`;
 
+  const imageAlt = getCourseImageAlt(course);
+  const detailHref = detailPageIds.has(course.id)
+    ? `/courses/${course.category}/${course.slug}`
+    : undefined;
+
+  const image = (
+    <div className="relative aspect-video w-full bg-gray-100">
+      <Image
+        src={course.image}
+        alt={imageAlt}
+        fill
+        className="object-cover"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+      />
+      {/* Badge */}
+      <span className="absolute top-2 left-2 bg-purple-primary text-white text-xs font-bold px-2 py-1 rounded">
+        UP TO 90% OFF
+      </span>
+    </div>
+  );
+
   return (
     <>
       <article className="bg-white border border-gray-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-        {/* Course image */}
-        <div className="relative aspect-video w-full bg-gray-100">
-          <Image
-            src={course.image}
-            alt={course.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-          {/* Badge */}
-          <span className="absolute top-2 left-2 bg-purple-primary text-white text-xs font-bold px-2 py-1 rounded">
-            UP TO 90% OFF
-          </span>
-        </div>
+        {/* Course image — links to the full course page when one exists */}
+        {detailHref ? <Link href={detailHref}>{image}</Link> : image}
 
         <div className="p-4 flex flex-col flex-1">
-          {/* Title */}
+          {/* Title — links to the full course page when one exists */}
           <h3 className="text-sm font-bold text-dark leading-snug mb-2 line-clamp-2 min-h-[2.5rem]">
-            {course.title}
+            {detailHref ? (
+              <Link href={detailHref} className="hover:text-purple-primary transition-colors">
+                {course.title}
+              </Link>
+            ) : (
+              course.title
+            )}
           </h3>
 
           {/* Description */}
@@ -113,6 +133,7 @@ export default function CourseCard({ course }: { course: Course }) {
         onClose={() => setModalOpen(false)}
         courseTitle={course.title}
         courseThumbnail={course.image}
+        courseImageAlt={imageAlt}
         courseLink={course.link}
       />
     </>

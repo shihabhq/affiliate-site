@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { categories } from "@/data/courses";
+import { categories, courses, detailPageCourseIds } from "@/data/courses";
 import { getAllPosts } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
 
@@ -40,6 +40,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
+    ...detailPageCourseIds
+      .map((id) => courses.find((c) => c.id === id))
+      .filter((c): c is NonNullable<typeof c> => Boolean(c))
+      .map((c) => ({
+        url: `${base}/courses/${c.category}/${c.slug}`,
+        lastModified: new Date("2026-09-01"),
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+      })),
     ...posts.map((post) => ({
       url: `${base}/blog/${post.slug}`,
       lastModified: new Date(post.date),
