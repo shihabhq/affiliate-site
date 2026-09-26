@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
@@ -8,13 +7,16 @@ import PaymentMethods from "@/components/PaymentMethods";
 import FinalCTA from "@/components/FinalCTA";
 import SectionHeading from "@/components/SectionHeading";
 import CourseGrid from "@/components/CourseGrid";
+import YouTubeFacade from "@/components/YouTubeFacade";
+import ProofGallery from "@/components/ProofGallery";
 import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import { courses, proofs, faqs } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash · Nagad · Rocket",
+  title:
+    "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash · Nagad · Rocket",
   description:
     "Buy any Udemy course in Bangladesh or from Bangladesh — web development, digital marketing, graphic design, data science & more. Pay with bKash, Nagad, Rocket. No dollar card needed. Up to 90% off.",
   alternates: { canonical: siteConfig.domain },
@@ -35,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
-    description: "Pay with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off.",
+    description:
+      "Pay with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off.",
     images: ["/assets/OG.png"],
   },
 };
@@ -65,8 +68,11 @@ const homeFaqJsonLd = {
   })),
 };
 
+const howToBuyVideoTitle =
+  "How to buy Udemy course in Bangladesh | বিকাশে ইউডেমি কোর্স কিনুন। Buy Udemy Course by bkash from BD";
+
 const featuredCourses = courses.slice(0, 8);
-const previewProofs = proofs.slice(0, 6);
+const previewProofs = proofs.slice(0, 12);
 const homeFaqs = faqs.slice(0, 5);
 
 export default function HomePage() {
@@ -81,7 +87,42 @@ export default function HomePage() {
       {/* 2. Trust bar */}
       <TrustBar />
 
-      {/* 3. Featured courses */}
+      {/* 3. Video walkthrough */}
+      <section className="py-16 px-4 bg-bg-light" id="how-to-buy-video">
+        <div className="max-w-3xl mx-auto">
+          <SectionHeading
+            title="Watch: How to Buy a Udemy Course in Bangladesh"
+            subtitle="A short walkthrough of buying udemy course"
+            centered
+          />
+          <YouTubeFacade videoId="CGtzQ0u9idI" title={howToBuyVideoTitle} />
+          <div className="mt-6 text-center">
+            <a
+              href={`${siteConfig.whatsappLink}?text=${encodeURIComponent("Hi! I watched your video on how to buy a Udemy course in Bangladesh. I don't have a dollar card. How can I pay with bKash?")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-whatsapp text-white font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
+            >
+              Message on WhatsApp
+            </a>
+            <p className="mt-2 text-sm text-gray-text">
+              বিকাশ দিয়ে পেমেন্ট করুন — কোনো ডলার কার্ড লাগবে না
+            </p>
+          </div>
+          <p className="mt-6 text-center text-sm text-gray-text">
+            Prefer to read? See the{" "}
+            <Link
+              href="/how-to-buy"
+              className="text-purple-primary font-semibold hover:underline"
+            >
+              full step-by-step guide
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* 4. Featured courses */}
       <section className="py-16 px-4 bg-white" id="featured-courses">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
@@ -114,22 +155,7 @@ export default function HomePage() {
             subtitle="These are genuine Udemy course deliveries to real customers in Bangladesh who paid via bKash, Nagad, and Rocket."
             centered
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-            {previewProofs.map((filename) => (
-              <div
-                key={filename}
-                className="relative aspect-square rounded-lg overflow-hidden border border-gray-border bg-gray-100"
-              >
-                <Image
-                  src={`/proofs/${filename}`}
-                  alt={`Purchase proof — ${filename.replace(/\.[^.]+$/, "")} Udemy course delivery Bangladesh`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                />
-              </div>
-            ))}
-          </div>
+          <ProofGallery proofs={previewProofs} variant="preview" />
           <div className="text-center">
             <Link
               href="/proofs"
