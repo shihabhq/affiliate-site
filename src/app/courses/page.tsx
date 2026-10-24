@@ -6,14 +6,14 @@ import { courses } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "All Udemy Courses in Bangladesh — Up to 90% OFF",
+  title: "All Udemy Courses in Bangladesh - Up to 90% OFF",
   description:
-    "Browse all Udemy courses available in Bangladesh. Buy with bKash, Nagad, Rocket — no dollar card needed. Web development, digital marketing, graphic design, data science and more.",
+    "Browse all Udemy courses available in Bangladesh. Buy with bKash, Nagad, Rocket - no dollar card needed. Web development, digital marketing, graphic design, data science and more.",
   alternates: { canonical: `${siteConfig.domain}/courses` },
   openGraph: {
-    title: "All Udemy Courses in Bangladesh — Up to 90% OFF",
+    title: "All Udemy Courses in Bangladesh - Up to 90% OFF",
     description:
-      "Browse 100s of Udemy courses — pay with bKash, Nagad, Rocket. No dollar card needed.",
+      "Browse 100s of Udemy courses - pay with bKash, Nagad, Rocket. No dollar card needed.",
     url: `${siteConfig.domain}/courses`,
     images: [
       {
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "All Udemy Courses in Bangladesh — Up to 90% OFF",
-    description: "Browse Udemy courses — pay with bKash, Nagad, Rocket. No dollar card needed.",
+    title: "All Udemy Courses in Bangladesh - Up to 90% OFF",
+    description: "Browse Udemy courses - pay with bKash, Nagad, Rocket. No dollar card needed.",
     images: ["/assets/OG.png"],
   },
 };
@@ -55,8 +55,8 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             as="h1"
-            title="All Udemy Courses — Up to 90% OFF"
-            subtitle="Find the perfect Udemy course for you. Pay with bKash, Nagad, or Rocket — no dollar card needed."
+            title="All Udemy Courses - Up to 90% OFF"
+            subtitle="Find the perfect Udemy course for you. Pay with bKash, Nagad, or Rocket - no dollar card needed."
           />
           <p className="text-sm text-gray-text mb-8 max-w-2xl">
             Browse {courses.length}+ top-rated Udemy courses available in Bangladesh.

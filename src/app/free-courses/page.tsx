@@ -9,27 +9,27 @@ import { siteConfig } from "@/config/site";
 import AffiliateLink from "@/components/AffiliateLink";
 
 export const metadata: Metadata = {
-  title: "Udemy Free Courses & Discounts in Bangladesh — Up to 90% OFF (2026)",
+  title: "Udemy Free Courses & Discounts in Bangladesh - Up to 90% OFF (2026)",
   description:
-    "Looking for Udemy free courses or 100% off coupons in Bangladesh? Get Udemy courses at up to 90% off — pay with bKash, Nagad, or Rocket. No dollar card needed. Web development, digital marketing, CPA marketing & more.",
+    "Looking for Udemy free courses or 100% off coupons in Bangladesh? Get Udemy courses at up to 90% off - pay with bKash, Nagad, or Rocket. No dollar card needed. Web development, digital marketing, CPA marketing & more.",
   alternates: { canonical: `${siteConfig.domain}/free-courses` },
   openGraph: {
-    title: "Udemy Free Courses & Discounts in Bangladesh — Up to 90% OFF",
+    title: "Udemy Free Courses & Discounts in Bangladesh - Up to 90% OFF",
     description:
-      "Get heavily discounted Udemy courses in Bangladesh. Pay with bKash — no dollar card needed. Web dev, digital marketing, CPA marketing and 100s more.",
+      "Get heavily discounted Udemy courses in Bangladesh. Pay with bKash - no dollar card needed. Web dev, digital marketing, CPA marketing and 100s more.",
     url: `${siteConfig.domain}/free-courses`,
     images: [
       {
         url: "/assets/OG.png",
         width: 1904,
         height: 982,
-        alt: "Udemy Free Courses & Discounts — Bangladesh",
+        alt: "Udemy Free Courses & Discounts - Bangladesh",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Udemy Free Courses & Discounts in Bangladesh — Up to 90% OFF",
+    title: "Udemy Free Courses & Discounts in Bangladesh - Up to 90% OFF",
     description: "Get up to 90% off Udemy courses in Bangladesh. Pay with bKash, Nagad, Rocket.",
     images: ["/assets/OG.png"],
   },
@@ -39,22 +39,22 @@ const faqItems = [
   {
     question: "Are there really free Udemy courses in Bangladesh?",
     answer:
-      "Udemy offers a small number of genuinely free courses. However, most premium courses (the ones with certificates, projects, and instructor support) are paid. The good news: during Udemy's frequent sales, courses can be up to 90% off — sometimes as low as $10–$15 (around ৳1,000–৳1,500 BDT). That's almost free for a lifetime-access course with certificate! We always share the best current discount. Message us on WhatsApp to get today's BDT price for any course.",
+      "Udemy offers a small number of genuinely free courses. However, most premium courses (the ones with certificates, projects, and instructor support) are paid. The good news: during Udemy's frequent sales, courses can be up to 90% off - sometimes as low as $10–$15 (around ৳1,000–৳1,500 BDT). That's almost free for a lifetime-access course with certificate! We always share the best current discount. Message us on WhatsApp to get today's BDT price for any course.",
   },
   {
     question: "What is a Udemy 100% off coupon code? Do they work in Bangladesh?",
     answer:
-      "Udemy 100% off coupon codes are special codes that instructors occasionally share to give free access to their courses. However, these codes expire within hours, are limited to a few hundred users, and are mostly available for low-demand courses. Instead of hunting expired coupons, use Udemy's official sales — you get the same result (very low prices) reliably. Our service helps you buy during sales with bKash at the best current BDT price.",
+      "Udemy 100% off coupon codes are special codes that instructors occasionally share to give free access to their courses. However, these codes expire within hours, are limited to a few hundred users, and are mostly available for low-demand courses. Instead of hunting expired coupons, use Udemy's official sales - you get the same result (very low prices) reliably. Our service helps you buy during sales with bKash at the best current BDT price.",
   },
   {
     question: "Can I get a free Udemy course with certificate?",
     answer:
-      "Free Udemy courses (the genuinely free ones) do offer certificates of completion. For paid courses bought during sales, you also get an official Udemy certificate — shareable on LinkedIn. When you buy through our bKash service, you get lifetime access + the same official certificate as buying directly.",
+      "Free Udemy courses (the genuinely free ones) do offer certificates of completion. For paid courses bought during sales, you also get an official Udemy certificate - shareable on LinkedIn. When you buy through our bKash service, you get lifetime access + the same official certificate as buying directly.",
   },
   {
     question: "How do I get Udemy courses at the lowest price in Bangladesh?",
     answer:
-      "The best way is: (1) Use our affiliate discount link which always links to the current Udemy sale price — up to 90% off. (2) If you don't have a dollar card, message us on WhatsApp and we'll give you today's BDT price for bKash payment. Udemy runs sales almost constantly so the discount is almost always active.",
+      "The best way is: (1) Use our affiliate discount link which always links to the current Udemy sale price - up to 90% off. (2) If you don't have a dollar card, message us on WhatsApp and we'll give you today's BDT price for bKash payment. Udemy runs sales almost constantly so the discount is almost always active.",
   },
   {
     question: "Which Udemy courses are most popular in Bangladesh?",
@@ -107,21 +107,21 @@ export default function FreeCoursesPage() {
             <p>
               Searching for <strong>Udemy free courses</strong> or a{" "}
               <strong>100% off coupon code</strong> in Bangladesh? You&apos;re
-              not alone — thousands of Bangladeshi learners search for this
+              not alone - thousands of Bangladeshi learners search for this
               every day. Here&apos;s the honest truth and the smartest way to
               get Udemy courses at the lowest possible price.
             </p>
             <p>
               Udemy offers a small number of genuinely free courses, but the
-              premium courses — the ones with hands-on projects, certificates,
-              and instructor Q&amp;A — are paid. <strong>However</strong>,
+              premium courses - the ones with hands-on projects, certificates,
+              and instructor Q&amp;A - are paid. <strong>However</strong>,
               Udemy runs aggressive sales almost every week where courses drop
               to up to <strong>90% off</strong>. A course originally priced at
               $199 can come down to just $10–$15{" "}
               <span className="text-purple-primary font-medium">
                 (roughly ৳1,000–৳1,500 BDT)
               </span>{" "}
-              — that&apos;s essentially the price of a cup of coffee for
+              - that&apos;s essentially the price of a cup of coffee for
               lifetime access and an official certificate.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function FreeCoursesPage() {
           {/* Two-path highlight box */}
           <div className="bg-bg-light border border-gray-border rounded-2xl p-6 mb-12">
             <h2 className="text-lg font-bold text-dark mb-4">
-              Get the Best Udemy Discount — Two Ways
+              Get the Best Udemy Discount - Two Ways
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-white border border-gray-border rounded-xl p-4">
@@ -138,7 +138,7 @@ export default function FreeCoursesPage() {
                   Have a Dollar / Dual-Currency Card?
                 </h3>
                 <p className="text-xs text-gray-text mb-3 leading-relaxed">
-                  Click our discount link — it takes you directly to Udemy with
+                  Click our discount link - it takes you directly to Udemy with
                   the best available sale price (up to 90% off). Pay in USD
                   with your card.
                 </p>
@@ -156,7 +156,7 @@ export default function FreeCoursesPage() {
                   give you today&apos;s BDT price. Pay via bKash/Nagad/Rocket
                   and get lifetime access on your email.
                   <span className="block mt-1 text-purple-primary">
-                    বিকাশ/নগদ দিয়ে পেমেন্ট করুন — কোনো ডলার কার্ড লাগবে না
+                    বিকাশ/নগদ দিয়ে পেমেন্ট করুন - কোনো ডলার কার্ড লাগবে না
                   </span>
                 </p>
                 <a
@@ -171,21 +171,21 @@ export default function FreeCoursesPage() {
             </div>
           </div>
 
-          {/* About 100% off coupons — honest section */}
+          {/* About 100% off coupons - honest section */}
           <section className="mb-12">
             <h2 className="text-xl font-bold text-dark mb-3">
               The Truth About Udemy 100% Off Coupon Codes
             </h2>
             <div className="space-y-3 text-sm text-gray-text leading-relaxed">
               <p>
-                Udemy 100% off coupons <em>do</em> exist — instructors
+                Udemy 100% off coupons <em>do</em> exist - instructors
                 occasionally release them to boost enrollment. But they come
                 with big limitations:
               </p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>They expire within 1–3 days (sometimes hours)</li>
                 <li>
-                  Limited to 100–500 redemptions — gone by the time most people
+                  Limited to 100–500 redemptions - gone by the time most people
                   find them
                 </li>
                 <li>
@@ -200,7 +200,7 @@ export default function FreeCoursesPage() {
                 <strong>Our recommendation:</strong> Instead of hunting coupons,
                 use Udemy&apos;s official sale prices which are active almost
                 24/7. A $10–$15 course with 90% off is just as good as a free
-                coupon — and far more reliable.
+                coupon - and far more reliable.
               </p>
             </div>
           </section>
@@ -263,8 +263,8 @@ export default function FreeCoursesPage() {
         {/* Featured courses */}
         <div className="max-w-7xl mx-auto mb-12">
           <SectionHeading
-            title="Top Udemy Courses — Available in Bangladesh"
-            subtitle="Browse our top picks. All courses available with bKash payment — no dollar card needed."
+            title="Top Udemy Courses - Available in Bangladesh"
+            subtitle="Browse our top picks. All courses available with bKash payment - no dollar card needed."
           />
           <CourseGrid courses={featuredCourses} />
           <div className="mt-8 text-center">
@@ -291,8 +291,8 @@ export default function FreeCoursesPage() {
               Ready to Buy a Udemy Course in Bangladesh?
             </h2>
             <p className="text-gray-400 text-sm mb-5">
-              Don&apos;t wait for a coupon. Get today&apos;s best price — up to
-              90% off — right now.
+              Don&apos;t wait for a coupon. Get today&apos;s best price - up to
+              90% off - right now.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <AffiliateLink className="bg-purple-primary hover:bg-purple-hover text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">

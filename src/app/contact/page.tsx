@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Udemy Course Bangladesh",
+  title: "Contact Us - Udemy Course Bangladesh",
   description:
     "Contact Udemy Course Bangladesh via WhatsApp, Facebook Messenger, or Facebook page to buy Udemy courses with bKash payment in Bangladesh.",
   alternates: { canonical: `${siteConfig.domain}/contact` },
@@ -29,7 +29,7 @@ export default function ContactPage() {
         </h1>
         <p className="text-gray-text mb-8 leading-relaxed">
           Have a question about buying a Udemy course in Bangladesh? Want to place an
-          order? Reach us through any of the channels below — we respond quickly on
+          order? Reach us through any of the channels below - we respond quickly on
           WhatsApp and Facebook Messenger.
         </p>
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
               <h2 className="font-bold text-dark group-hover:text-whatsapp transition-colors">WhatsApp</h2>
               <p className="text-sm text-gray-text">{siteConfig.whatsappNumber}</p>
               <p className="text-xs text-gray-text mt-1">
-                Fastest response — tap to open WhatsApp and start chatting
+                Fastest response - tap to open WhatsApp and start chatting
               </p>
             </div>
           </a>

@@ -16,29 +16,29 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title:
-    "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash · Nagad · Rocket",
+    "Buy Udemy Courses in Bangladesh - Up to 90% OFF | bKash · Nagad · Rocket",
   description:
-    "Buy any Udemy course in Bangladesh or from Bangladesh — web development, digital marketing, graphic design, data science & more. Pay with bKash, Nagad, Rocket. No dollar card needed. Up to 90% off.",
+    "Buy any Udemy course in Bangladesh or from Bangladesh - web development, digital marketing, graphic design, data science & more. Pay with bKash, Nagad, Rocket. No dollar card needed. Up to 90% off.",
   alternates: { canonical: siteConfig.domain },
   openGraph: {
-    title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+    title: "Buy Udemy Courses in Bangladesh - Up to 90% OFF",
     description:
-      "Pay with bKash, Nagad, Rocket — no dollar card needed. Web development, digital marketing, CPA marketing, graphic design and 100s more Udemy courses available in BD.",
+      "Pay with bKash, Nagad, Rocket - no dollar card needed. Web development, digital marketing, CPA marketing, graphic design and 100s more Udemy courses available in BD.",
     url: siteConfig.domain,
     images: [
       {
         url: "/assets/OG.png",
         width: 1904,
         height: 982,
-        alt: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+        alt: "Buy Udemy Courses in Bangladesh - Up to 90% OFF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+    title: "Buy Udemy Courses in Bangladesh - Up to 90% OFF",
     description:
-      "Pay with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off.",
+      "Pay with bKash, Nagad, Rocket - no dollar card needed. Up to 90% off.",
     images: ["/assets/OG.png"],
   },
 };
@@ -48,9 +48,9 @@ const homeJsonLd = {
   "@type": "WebPage",
   "@id": `${siteConfig.domain}/#webpage`,
   url: siteConfig.domain,
-  name: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+  name: "Buy Udemy Courses in Bangladesh - Up to 90% OFF",
   description:
-    "Buy any Udemy course in Bangladesh with bKash, Nagad, Rocket — no dollar card needed.",
+    "Buy any Udemy course in Bangladesh with bKash, Nagad, Rocket - no dollar card needed.",
   isPartOf: { "@id": `${siteConfig.domain}/#website` },
   about: { "@id": `${siteConfig.domain}/#organization` },
 };
@@ -106,7 +106,8 @@ export default function HomePage() {
               Message on WhatsApp
             </a>
             <p className="mt-2 text-sm text-gray-text">
-              বিকাশ দিয়ে পেমেন্ট করুন — কোনো ডলার কার্ড লাগবে না
+              বিকাশ/নগদ/রকেট দিয়ে পেমেন্ট করুন, কোনো Dual Currency কার্ড লাগবে
+              না
             </p>
           </div>
           <p className="mt-6 text-center text-sm text-gray-text">
@@ -126,8 +127,8 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-white" id="featured-courses">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
-            title="Featured Courses — Up to 90% OFF"
-            subtitle="Top-rated Udemy courses available in Bangladesh. Pay with bKash, Nagad, or Rocket — no dollar card needed."
+            title="Featured Courses - Up to 90% OFF"
+            subtitle="Top-rated Udemy courses available in Bangladesh. Pay with bKash, Nagad, or Rocket - no dollar card needed."
           />
           <CourseGrid courses={featuredCourses} />
           <div className="mt-8 text-center">

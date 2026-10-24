@@ -6,12 +6,12 @@ import { proofs } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Purchase Proofs — Real Udemy Course Deliveries in Bangladesh",
+  title: "Purchase Proofs - Real Udemy Course Deliveries in Bangladesh",
   description:
     "See real purchase proofs from 100+ happy customers in Bangladesh who bought Udemy courses with bKash, Nagad, and Rocket through Udemy Course Bangladesh.",
   alternates: { canonical: `${siteConfig.domain}/proofs` },
   openGraph: {
-    title: "Purchase Proofs — Real Udemy Course Deliveries in Bangladesh",
+    title: "Purchase Proofs - Real Udemy Course Deliveries in Bangladesh",
     description:
       "100+ real customers in Bangladesh bought Udemy courses with bKash through us. See the proofs.",
     url: `${siteConfig.domain}/proofs`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real Udemy Purchase Proofs — Bangladesh",
+    title: "Real Udemy Purchase Proofs - Bangladesh",
     description:
       "100+ real customers bought Udemy courses with bKash. See proof screenshots.",
     images: ["/assets/OG.png"],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const proofsJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Purchase Proofs — Real Udemy Course Deliveries in Bangladesh",
+  name: "Purchase Proofs - Real Udemy Course Deliveries in Bangladesh",
   description:
     "Real screenshots of Udemy course deliveries to customers in Bangladesh who paid via bKash, Nagad, and Rocket.",
   url: `${siteConfig.domain}/proofs`,
@@ -62,7 +62,7 @@ export default function ProofsPage() {
           </h1>
           <p className="text-gray-text mb-4 max-w-2xl leading-relaxed">
             These are genuine screenshots of Udemy course deliveries to real
-            customers across Bangladesh — from Dhaka to Chittagong, Sylhet to
+            customers across Bangladesh - from Dhaka to Chittagong, Sylhet to
             Rajshahi. Every single one of these learners paid in BDT via bKash,
             Nagad, or Rocket and received their course with lifetime access and
             a certificate.
@@ -98,7 +98,7 @@ export default function ProofsPage() {
           <div className="mt-12 text-center bg-dark text-white rounded-lg p-8">
             <h2 className="text-xl font-bold mb-2">Ready to Join Them?</h2>
             <p className="text-gray-400 text-sm mb-6">
-              Get your Udemy course delivered to your email — pay with bKash,
+              Get your Udemy course delivered to your email - pay with bKash,
               Nagad, or Rocket.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

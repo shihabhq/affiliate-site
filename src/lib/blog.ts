@@ -1,18 +1,18 @@
 import fs from "fs";
 import path from "path";
 
-// Blog posts live as .mdx files in src/content/blog/ — one file per post.
+// Blog posts live as .mdx files in src/content/blog/ - one file per post.
 // Each file exports `metadata` (this shape) plus its MDX body as the default
 // export. See src/content/blog/README.md for the authoring guide.
 export type BlogMetadata = {
-  /** SEO title — <title> tag, OG/Twitter title. Keep this in English (with
+  /** SEO title - <title> tag, OG/Twitter title. Keep this in English (with
    * your target keywords) even when the post body is Bengali. */
   title: string;
-  /** SEO meta description — English, ≤160 chars. */
+  /** SEO meta description - English, ≤160 chars. */
   description: string;
   /**
    * The headline actually shown to readers (H1 on the post, heading on the
-   * /blog card). Optional — write it in Bengali when the post is; falls
+   * /blog card). Optional - write it in Bengali when the post is; falls
    * back to `title` when omitted, so an English post doesn't need it.
    */
   displayTitle?: string;
@@ -27,7 +27,7 @@ export type BlogMetadata = {
   coverImageAlt: string;
 };
 
-/** The headline to display to readers — `displayTitle` if set, else `title`. */
+/** The headline to display to readers - `displayTitle` if set, else `title`. */
 export function displayTitleOf(metadata: BlogMetadata): string {
   return metadata.displayTitle || metadata.title;
 }
@@ -44,7 +44,7 @@ export function getBlogSlugs(): string[] {
 
 async function importPost(slug: string) {
   // Dynamic import path must stay statically analyzable (no arbitrary
-  // variables built from user input) — slugs only ever come from
+  // variables built from user input) - slugs only ever come from
   // getBlogSlugs(), which only lists real files on disk.
   return import(`@/content/blog/${slug}.mdx`);
 }

@@ -1,15 +1,15 @@
 // Extra content for the pilot batch of individual course pages
-// (/courses/[category]/[slug] — see detailPageCourseIds in courses.ts).
+// (/courses/[category]/[slug] - see detailPageCourseIds in courses.ts).
 // Keyed by course `id`. Every id in detailPageCourseIds must have an entry here.
 //
-// This is our own original copy, not copied from Udemy — see CLAUDE.md §11.
+// This is our own original copy, not copied from Udemy - see CLAUDE.md §11.
 
 export type CourseDetailContent = {
   /** 4-6 short bullet points on what the course covers */
   learnPoints: string[];
   /** 2-3 sentence paragraph on why this course matters for a Bangladeshi learner */
   whyBangladesh: string;
-  /** Course-specific FAQ — keep distinct from the category-page FAQ, not a repeat of it */
+  /** Course-specific FAQ - keep distinct from the category-page FAQ, not a repeat of it */
   faqs: { question: string; answer: string }[];
 };
 
@@ -23,12 +23,12 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       "Authentication, RESTful routing, and working with APIs",
     ],
     whyBangladesh:
-      "This is usually the first serious course Bangladeshi beginners take before applying for junior developer roles or picking up freelance web projects on Fiverr and Upwork. Because it goes from zero to a working full-stack app, you finish with 2-3 real projects you can show a client or an employer — not just certificates.",
+      "This is usually the first serious course Bangladeshi beginners take before applying for junior developer roles or picking up freelance web projects on Fiverr and Upwork. Because it goes from zero to a working full-stack app, you finish with 2-3 real projects you can show a client or an employer - not just certificates.",
     faqs: [
       {
         question: "Is The Web Developer Bootcamp good for someone with zero coding experience?",
         answer:
-          "Yes — it's designed for complete beginners and starts from the very basics of HTML. No prior programming knowledge is assumed. Bangladeshi students with no CS background regularly use this as their first web development course.",
+          "Yes - it's designed for complete beginners and starts from the very basics of HTML. No prior programming knowledge is assumed. Bangladeshi students with no CS background regularly use this as their first web development course.",
       },
       {
         question: "How long does it take to finish this course?",
@@ -43,7 +43,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       {
         question: "Do I need a powerful laptop to follow along?",
         answer:
-          "No — any laptop that can run a modern code editor (VS Code) and a browser is enough. A Core i3/Ryzen 3 with 4GB RAM handles this course fine; you don't need a gaming laptop for web development.",
+          "No - any laptop that can run a modern code editor (VS Code) and a browser is enough. A Core i3/Ryzen 3 with 4GB RAM handles this course fine; you don't need a gaming laptop for web development.",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       "Running Facebook Ads and Google Ads campaigns from scratch",
       "Email marketing funnels and list-building",
       "Social media marketing strategy across platforms",
-      "Analytics — reading the numbers to know what's actually working",
+      "Analytics - reading the numbers to know what's actually working",
     ],
     whyBangladesh:
       "Digital marketing is one of the most in-demand freelance skills coming out of Bangladesh, because clients on Fiverr and Upwork hire for it constantly and the work is fully remote. Because this course bundles 27 sub-courses into one, it covers enough ground (SEO, Ads, email, social) that you can pick a specialty once you see which part you enjoy most.",
@@ -62,7 +62,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       {
         question: "Is this one course or a bundle of several courses?",
         answer:
-          "It's a single Udemy listing that bundles 27 focused mini-courses — SEO, Facebook Ads, Google Ads, email marketing, and more — under one purchase, so you get broad coverage instead of buying each topic separately.",
+          "It's a single Udemy listing that bundles 27 focused mini-courses - SEO, Facebook Ads, Google Ads, email marketing, and more - under one purchase, so you get broad coverage instead of buying each topic separately.",
       },
       {
         question: "Do I need any marketing background to start?",
@@ -91,17 +91,17 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       "Building clean, presentation-ready reports and dashboards",
     ],
     whyBangladesh:
-      "Excel is a baseline requirement for almost every office job in Bangladesh — accounting, admin, data entry, banking, and NGO roles all expect it. This is Udemy's most-enrolled Excel course, which means the explanations have been refined against millions of learners' questions, making it a reliable pick even for someone who's never opened a spreadsheet professionally before.",
+      "Excel is a baseline requirement for almost every office job in Bangladesh - accounting, admin, data entry, banking, and NGO roles all expect it. This is Udemy's most-enrolled Excel course, which means the explanations have been refined against millions of learners' questions, making it a reliable pick even for someone who's never opened a spreadsheet professionally before.",
     faqs: [
       {
         question: "Is this course suitable if I've never used Excel for work before?",
         answer:
-          "Yes — it starts from the absolute basics (opening a workbook, entering data) before moving into Pivot Tables, VLOOKUP, and Macros, so no prior spreadsheet experience is needed.",
+          "Yes - it starts from the absolute basics (opening a workbook, entering data) before moving into Pivot Tables, VLOOKUP, and Macros, so no prior spreadsheet experience is needed.",
       },
       {
         question: "Will this help me pass a job interview Excel test in Bangladesh?",
         answer:
-          "It covers the core skills most Bangladeshi employers test for — formulas, Pivot Tables, and basic data cleaning — so it's a solid preparation course, though the exact test format varies by company.",
+          "It covers the core skills most Bangladeshi employers test for - formulas, Pivot Tables, and basic data cleaning - so it's a solid preparation course, though the exact test format varies by company.",
       },
       {
         question: "How much does this Excel course cost in BDT?",
@@ -118,7 +118,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
 
   "python-bootcamp": {
     learnPoints: [
-      "Python syntax and fundamentals — variables, loops, functions",
+      "Python syntax and fundamentals - variables, loops, functions",
       "Object-oriented programming (OOP) in Python",
       "Working with files, error handling, and debugging",
       "Basic web scraping and automation scripts",
@@ -145,7 +145,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       {
         question: "Can I run Python on a low-spec laptop?",
         answer:
-          "Yes. Python and a code editor run comfortably on almost any laptop from the last decade — no special hardware is needed for this course.",
+          "Yes. Python and a code editor run comfortably on almost any laptop from the last decade - no special hardware is needed for this course.",
       },
     ],
   },
@@ -159,7 +159,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       "Building a portfolio of practice projects as you go",
     ],
     whyBangladesh:
-      "Graphic design is one of the more accessible freelance skills to start from Bangladesh — clients on Fiverr regularly need logos, social media creatives, and print design, and the barrier to entry is a laptop and this kind of foundational course rather than expensive equipment. Covering Photoshop, Illustrator, and InDesign together means you're not locked into just one tool.",
+      "Graphic design is one of the more accessible freelance skills to start from Bangladesh - clients on Fiverr regularly need logos, social media creatives, and print design, and the barrier to entry is a laptop and this kind of foundational course rather than expensive equipment. Covering Photoshop, Illustrator, and InDesign together means you're not locked into just one tool.",
     faqs: [
       {
         question: "Do I need Adobe Creative Cloud to follow this course?",
@@ -177,7 +177,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
           "Listed at $199.99, typically discounted to $10-$20 during Udemy sales (roughly ৳1,100-৳2,200 BDT). Message us on WhatsApp for today's exact price.",
       },
       {
-        question: "I only want to learn Figma for UI/UX, not Photoshop/Illustrator — is this the right course?",
+        question: "I only want to learn Figma for UI/UX, not Photoshop/Illustrator - is this the right course?",
         answer:
           "This course focuses on the Adobe design suite for graphic design and branding work. If you specifically want Figma and UI/UX design, our Figma UI UX Design Essentials course is a closer match.",
       },
@@ -187,7 +187,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
   "data-science-bootcamp": {
     learnPoints: [
       "Statistics fundamentals needed to understand data correctly",
-      "Python for data science — NumPy, Pandas, and data manipulation",
+      "Python for data science - NumPy, Pandas, and data manipulation",
       "Machine learning basics: regression, classification, and model evaluation",
       "An introduction to deep learning concepts",
       "How the pieces fit together in a real data science workflow",
@@ -203,7 +203,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       {
         question: "Does this course cover Machine Learning and Deep Learning both?",
         answer:
-          "Yes — it's structured to go from statistics fundamentals through Python, into Machine Learning, and finishes with an introduction to Deep Learning, so you get the full pipeline in one course.",
+          "Yes - it's structured to go from statistics fundamentals through Python, into Machine Learning, and finishes with an introduction to Deep Learning, so you get the full pipeline in one course.",
       },
       {
         question: "How much does this course cost in Bangladesh (BDT)?",
@@ -213,7 +213,7 @@ export const courseDetails: Record<string, CourseDetailContent> = {
       {
         question: "Is this course enough to get a data analyst job in Bangladesh?",
         answer:
-          "It gives you the technical foundation employers look for, but landing a role also depends on building your own project portfolio and, ideally, a strong Excel/SQL base alongside it — our Excel and Data Analyst Bootcamp courses pair well with this one.",
+          "It gives you the technical foundation employers look for, but landing a role also depends on building your own project portfolio and, ideally, a strong Excel/SQL base alongside it - our Excel and Data Analyst Bootcamp courses pair well with this one.",
       },
     ],
   },

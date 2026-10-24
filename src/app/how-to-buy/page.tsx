@@ -7,14 +7,14 @@ import AffiliateLink from "@/components/AffiliateLink";
 
 export const metadata: Metadata = {
   title:
-    "How to Buy Udemy Course in Bangladesh (2026) — bKash, Nagad, Rocket or Card",
+    "How to Buy Udemy Course in Bangladesh (2026) - bKash, Nagad, Rocket or Card",
   description:
-    "Complete guide: how to buy any Udemy course from Bangladesh — with bKash, Nagad, Rocket or a dollar card. Works with or without a dollar card. Step-by-step for beginners in BD.",
+    "Complete guide: how to buy any Udemy course from Bangladesh - with bKash, Nagad, Rocket or a dollar card. Works with or without a dollar card. Step-by-step for beginners in BD.",
   alternates: { canonical: `${siteConfig.domain}/how-to-buy` },
   openGraph: {
     title: "How to Buy Udemy Course in Bangladesh (2026)",
     description:
-      "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Step-by-step guide with both methods.",
+      "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket - no dollar card needed. Step-by-step guide with both methods.",
     url: `${siteConfig.domain}/how-to-buy`,
     images: [
       {
@@ -42,7 +42,7 @@ const howToFaqs = [
   {
     question: "Do I get an official Udemy certificate?",
     answer:
-      "Yes. Udemy issues an official certificate of completion once you finish the course — the same one you'd get buying directly on Udemy. Shareable on LinkedIn.",
+      "Yes. Udemy issues an official certificate of completion once you finish the course - the same one you'd get buying directly on Udemy. Shareable on LinkedIn.",
   },
   {
     question: "How fast will I receive the course after paying with bKash?",
@@ -57,7 +57,7 @@ const howToFaqs = [
   {
     question: "What is the BDT price of Udemy courses?",
     answer:
-      "BDT prices depend on Udemy's current sale. Message us with the course name and we'll give you the exact price — no hidden fees.",
+      "BDT prices depend on Udemy's current sale. Message us with the course name and we'll give you the exact price - no hidden fees.",
   },
   {
     question: "Do I need a Udemy account before ordering?",
@@ -71,7 +71,7 @@ const howToJsonLd = {
   "@type": "HowTo",
   name: "How to Buy Udemy Course in Bangladesh Without a Dollar Card",
   description:
-    "Step-by-step guide to buying Udemy courses in Bangladesh using bKash, Nagad, or Rocket — no international card needed.",
+    "Step-by-step guide to buying Udemy courses in Bangladesh using bKash, Nagad, or Rocket - no international card needed.",
   step: [
     {
       "@type": "HowToStep",
@@ -182,13 +182,13 @@ export default function HowToBuyPage() {
           <div className="h-1 w-10 bg-purple-primary rounded-full mb-6" />
 
           <p className="text-gray-text leading-relaxed mb-4">
-            Udemy requires a dollar or dual-currency card for direct payment —
+            Udemy requires a dollar or dual-currency card for direct payment -
             and most people in Bangladesh don&apos;t have one. The good news:
             there are two easy ways to buy any Udemy course from Bangladesh.
             Choose the method that suits you below.
           </p>
           <p className="text-gray-text leading-relaxed mb-8">
-            Whether you want to buy a Udemy course from Bangladesh with bKash, Nagad, or Rocket — or use a dollar card — this guide covers both. No credit card? No problem. Thousands of Bangladeshi learners buy Udemy courses this way every month.
+            Whether you want to buy a Udemy course from Bangladesh with bKash, Nagad, or Rocket - or use a dollar card - this guide covers both. No credit card? No problem. Thousands of Bangladeshi learners buy Udemy courses this way every month.
           </p>
 
           {/* Quick pick */}
@@ -202,7 +202,7 @@ export default function HowToBuyPage() {
                 I have a dollar card
               </h2>
               <p className="text-sm text-gray-text mt-1">
-                Buy directly on Udemy — get up to 90% off instantly
+                Buy directly on Udemy - get up to 90% off instantly
               </p>
             </a>
             <a
@@ -233,7 +233,7 @@ export default function HowToBuyPage() {
                 {
                   n: "1",
                   title: "Click Our Discount Link",
-                  desc: 'Click "Get Discount on Udemy" — it opens Udemy with the best available sale price.',
+                  desc: 'Click "Get Discount on Udemy" - it opens Udemy with the best available sale price.',
                 },
                 {
                   n: "2",
@@ -280,15 +280,15 @@ export default function HowToBuyPage() {
           {/* Method 2 */}
           <section className="mb-12" id="method-2-bkash">
             <h2 className="text-xl font-bold text-dark mb-1">
-              Method 2: Without a Card — Pay with bKash, Nagad, or Rocket
+              Method 2: Without a Card - Pay with bKash, Nagad, or Rocket
             </h2>
             <div className="h-1 w-8 bg-whatsapp rounded-full mb-4" />
             <p className="text-gray-text mb-1 text-sm leading-relaxed">
               This is the most popular method for Bangladeshi learners. Just
-              message us — we handle the Udemy purchase, you pay in BDT.
+              message us - we handle the Udemy purchase, you pay in BDT.
             </p>
             <p className="text-purple-primary font-medium text-xs mb-5">
-              বিকাশ/নগদ/রকেট দিয়ে পেমেন্ট করুন — কোনো ডলার কার্ড লাগবে না
+              বিকাশ/নগদ/রকেট দিয়ে পেমেন্ট করুন - কোনো ডলার কার্ড লাগবে না
             </p>
 
             <div className="space-y-3">
@@ -357,7 +357,7 @@ export default function HowToBuyPage() {
                     proofs page
                   </Link>
                 </>,
-                "Honest pricing — no fake discounts or hidden fees",
+                "Honest pricing - no fake discounts or hidden fees",
                 "Fast response on WhatsApp and Messenger",
               ].map((item, i) => (
                 <li key={i} className="flex gap-2 items-start">
@@ -380,34 +380,34 @@ export default function HowToBuyPage() {
           {/* Bangla courses & popular topics */}
           <section className="mb-12" id="popular-courses-bangladesh">
             <h2 className="text-xl font-bold text-dark mb-1">
-              Popular Udemy Courses in Bangladesh — What People Search Most
+              Popular Udemy Courses in Bangladesh - What People Search Most
             </h2>
             <div className="h-1 w-8 bg-purple-primary rounded-full mb-4" />
             <p className="text-sm text-gray-text mb-5 leading-relaxed">
               Here are the most searched Udemy courses among Bangladeshi
-              learners. All available through our bKash service — just tell us
+              learners. All available through our bKash service - just tell us
               the course name.
             </p>
             <div className="space-y-2 text-sm text-gray-text">
               {[
                 {
                   topic: "Web Development Course",
-                  note: "HTML, CSS, JavaScript, React, Node.js — top pick for aspiring developers",
+                  note: "HTML, CSS, JavaScript, React, Node.js - top pick for aspiring developers",
                   href: "/courses/web-development",
                 },
                 {
                   topic: "Digital Marketing Masterclass",
-                  note: "SEO, Facebook Ads, Google Ads, email marketing — Bangla tutorials available",
+                  note: "SEO, Facebook Ads, Google Ads, email marketing - Bangla tutorials available",
                   href: "/courses/digital-marketing",
                 },
                 {
                   topic: "CPA Marketing Course",
-                  note: "Earn online through cost-per-action marketing — very popular in BD",
+                  note: "Earn online through cost-per-action marketing - very popular in BD",
                   href: "/courses/cpa-marketing",
                 },
                 {
                   topic: "SEO & Keyword Research",
-                  note: "Rank websites on Google — essential for freelancers and business owners",
+                  note: "Rank websites on Google - essential for freelancers and business owners",
                   href: "/courses/digital-marketing",
                 },
                 {
@@ -417,7 +417,7 @@ export default function HowToBuyPage() {
                 },
                 {
                   topic: "Graphic Design (Photoshop, Figma)",
-                  note: "UI/UX, logo design, branding — highly paid skill in Bangladesh",
+                  note: "UI/UX, logo design, branding - highly paid skill in Bangladesh",
                   href: "/courses/graphic-design",
                 },
               ].map((item) => (
@@ -440,7 +440,7 @@ export default function HowToBuyPage() {
             </div>
             <p className="text-xs text-gray-text mt-4">
               Udemy also has courses taught in <strong>Bangla (Bengali)</strong>{" "}
-              — just mention &ldquo;Bangla course&rdquo; when you message us and
+              - just mention &ldquo;Bangla course&rdquo; when you message us and
               we&apos;ll help you find the right one.{" "}
               <span className="text-purple-primary">
                 বাংলায় কোর্স পেতে আমাদের মেসেজ করুন।

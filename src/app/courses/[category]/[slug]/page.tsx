@@ -22,7 +22,7 @@ function findCourse(category: string, slug: string) {
   );
 }
 
-// Only the pilot batch in detailPageCourseIds gets a static page — everything
+// Only the pilot batch in detailPageCourseIds gets a static page - everything
 // else 404s instead of rendering a thin, content-less page for every catalog
 // entry. Expand detailPageCourseIds (and add a matching src/data/courseDetails.ts
 // entry) to bring more courses in.
@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!course) return {};
 
   const label = categoryLabels[course.category] ?? course.category;
-  const title = `${course.title} — Price in Bangladesh & bKash Payment`;
-  const description = `Buy ${course.title} in Bangladesh — ${label} Udemy course, up to 90% off. Pay with bKash, Nagad, or Rocket. No dollar card needed.`;
+  const title = `${course.title} - Price in Bangladesh & bKash Payment`;
+  const description = `Buy ${course.title} in Bangladesh - ${label} Udemy course, up to 90% off. Pay with bKash, Nagad, or Rocket. No dollar card needed.`;
   const url = `${siteConfig.domain}/courses/${course.category}/${course.slug}`;
   const imageAlt = getCourseImageAlt(course);
 
@@ -174,7 +174,7 @@ export default async function CourseDetailPage({ params }: Props) {
 
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-dark tracking-tight mb-3 leading-tight">
-                {course.title} — Buy in Bangladesh with bKash
+                {course.title} - Buy in Bangladesh with bKash
               </h1>
 
               <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -196,12 +196,12 @@ export default async function CourseDetailPage({ params }: Props) {
               <p className="text-xs text-gray-text mb-5">
                 Original price: <span className="line-through">{course.originalPrice}</span>{" "}
                 <span className="text-green-price font-semibold">
-                  Up to 90% off during Udemy sales — final price shown at checkout
+                  Up to 90% off during Udemy sales - final price shown at checkout
                 </span>
               </p>
 
               <CourseBuyButton course={course} imageAlt={imageAlt} />
-              <p className="text-xs text-gray-text mt-3">বিকাশ দিয়ে পেমেন্ট করুন — কোনো ডলার কার্ড লাগবে না</p>
+              <p className="text-xs text-gray-text mt-3">বিকাশ দিয়ে পেমেন্ট করুন - কোনো ডলার কার্ড লাগবে না</p>
             </div>
           </div>
 

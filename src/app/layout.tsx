@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 // Bengali-capable body font for blog posts written in Bangla (most of them).
-// Site chrome (nav, buttons, etc.) stays on Geist regardless — only a blog
+// Site chrome (nav, buttons, etc.) stays on Geist regardless - only a blog
 // post's article body switches to this, via the `font-bengali` utility,
 // when that post's frontmatter sets language: "bn".
 const hindSiliguri = Hind_Siliguri({
@@ -33,7 +33,7 @@ const OG_IMAGE = {
   url: "/assets/OG.png",
   width: 1904,
   height: 982,
-  alt: "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash · Nagad · Rocket",
+  alt: "Buy Udemy Courses in Bangladesh - Up to 90% OFF | bKash · Nagad · Rocket",
 };
 
 export const metadata: Metadata = {
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
   // ── Titles ──────────────────────────────────────────────────────────
   title: {
     template: "%s | Udemy Course Bangladesh",
-    default: "Buy Udemy Courses in Bangladesh — Up to 90% OFF | bKash Accepted",
+    default: "Buy Udemy Courses in Bangladesh - Up to 90% OFF | bKash Accepted",
   },
 
   // ── Description ─────────────────────────────────────────────────────
   description:
-    "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket — no dollar card needed. Up to 90% off on web development, digital marketing, graphic design & more. 100+ happy learners.",
+    "Buy Udemy courses in Bangladesh with bKash, Nagad, Rocket - no dollar card needed. Up to 90% off on web development, digital marketing, graphic design & more. 100+ happy learners.",
 
   // ── Canonical & alternates ───────────────────────────────────────────
   alternates: { canonical: siteConfig.domain },
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
     locale: "en_BD",
     siteName: siteConfig.name,
     url: siteConfig.domain,
-    title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+    title: "Buy Udemy Courses in Bangladesh - Up to 90% OFF",
     description:
-      "Pay with bKash, Nagad, Rocket — no dollar card needed. Web development, digital marketing, CPA marketing, freelancing & more. 100+ happy learners.",
+      "Pay with bKash, Nagad, Rocket - no dollar card needed. Web development, digital marketing, CPA marketing, freelancing & more. 100+ happy learners.",
     images: [OG_IMAGE],
   },
 
@@ -86,9 +86,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@udemybd",
-    title: "Buy Udemy Courses in Bangladesh — Up to 90% OFF",
+    title: "Buy Udemy Courses in Bangladesh - Up to 90% OFF",
     description:
-      "Pay with bKash, Nagad, Rocket — no dollar card needed. Web dev, digital marketing, CPA marketing & more.",
+      "Pay with bKash, Nagad, Rocket - no dollar card needed. Web dev, digital marketing, CPA marketing & more.",
     images: [OG_IMAGE],
   },
 
@@ -131,7 +131,7 @@ const organizationJsonLd = {
         "@type": "ImageObject",
         url: `${siteConfig.domain}/assets/main-logo.jpg`,
       },
-      sameAs: [siteConfig.facebook, siteConfig.instagram],
+      sameAs: [siteConfig.facebook, siteConfig.instagram, siteConfig.youtube],
       contactPoint: {
         "@type": "ContactPoint",
         telephone: siteConfig.phone,

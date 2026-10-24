@@ -118,7 +118,7 @@ export default function PurchaseModal({
             কোর্সটি কিনতে মেসেজ করুন!
           </p>
 
-          {/* Option A — No card (primary) */}
+          {/* Option A - No card (primary) */}
           <div className="border-2 border-whatsapp rounded-lg p-4 mb-4 bg-green-50">
             <p className="text-sm font-semibold text-dark mb-1">
               💳 ডলার কার্ড নেই? কোনো সমস্যা নেই!
@@ -159,7 +159,7 @@ export default function PurchaseModal({
             </p>
           </div>
 
-          {/* Option B — Has card (secondary) */}
+          {/* Option B - Has card (secondary) */}
           <div className="border border-gray-border rounded-lg p-4">
             <p className="text-sm font-semibold text-dark mb-1">
               ✅ আপনার কাছে Dollar / Dual Currency Card আছে?

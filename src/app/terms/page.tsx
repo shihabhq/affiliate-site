@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Terms of Use — Udemy Course Bangladesh",
+  title: "Terms of Use - Udemy Course Bangladesh",
   description:
     "Terms of use for the Udemy Course Bangladesh website and bKash course purchase service.",
   alternates: { canonical: `${siteConfig.domain}/terms` },
@@ -69,7 +69,7 @@ export default function TermsPage() {
           </p>
           <p>
             We cannot guarantee that a specific discount percentage will always
-            be available — Udemy controls its own pricing and promotions. We
+            be available - Udemy controls its own pricing and promotions. We
             describe discounts as &quot;up to 80–90% off&quot; because that is
             the range during Udemy&apos;s regular sales, not a guaranteed fixed
             discount.

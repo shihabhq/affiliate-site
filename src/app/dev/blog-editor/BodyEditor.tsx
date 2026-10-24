@@ -29,7 +29,7 @@ const SNIPPETS = [
 // The body field for the dev blog editor: a syntax-highlighted Markdown/MDX
 // editor (CodeMirror) with drag-and-drop image upload, snippet buttons for
 // this site's custom MDX components, and a live rendered-Markdown preview
-// pane. The preview renders plain Markdown only — <CourseCTA />, <OfferCTA />,
+// pane. The preview renders plain Markdown only - <CourseCTA />, <OfferCTA />,
 // <FinalCTA /> show as literal text here since they're real React components,
 // not Markdown; the "Preview →" link elsewhere in the page (which opens the
 // actual /blog/[slug] route on the running dev server) is the accurate,
@@ -108,7 +108,7 @@ export default function BodyEditor({
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-        {/* Editor pane — also the drop target for drag-and-drop images */}
+        {/* Editor pane - also the drop target for drag-and-drop images */}
         <div
           onDragOver={(e) => {
             e.preventDefault();
@@ -146,7 +146,7 @@ export default function BodyEditor({
           style={{ maxHeight: 480 }}
         >
           <p className="text-[10px] font-semibold uppercase tracking-wide text-gray-text mb-3">
-            Live preview — text/images/lists only.{" "}
+            Live preview - text/images/lists only.{" "}
             <span className="normal-case font-normal">
               CourseCTA / OfferCTA / FinalCTA render for real on the
               &quot;Preview →&quot; page.

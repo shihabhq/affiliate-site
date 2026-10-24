@@ -3,7 +3,7 @@ import path from "path";
 
 // Server-side helpers behind the dev-only blog editor (/dev/blog-editor and
 // /api/dev/*). Every caller is expected to have already checked
-// process.env.NODE_ENV === "development" — these helpers don't re-check it,
+// process.env.NODE_ENV === "development" - these helpers don't re-check it,
 // they just read/write src/content/blog/*.mdx on disk.
 
 const BLOG_DIR = path.join(/*turbopackIgnore: true*/ process.cwd(), "src/content/blog");
@@ -46,7 +46,7 @@ export function readPost(slug: string): EditablePost | null {
   const text = fs.readFileSync(file, "utf8");
   const { metadataText, body } = splitMetadataAndBody(text);
   // Evaluating the post's own metadata object literal. This never runs
-  // outside `next dev`, and it's the developer's own local file — the exact
+  // outside `next dev`, and it's the developer's own local file - the exact
   // same trust boundary as `next dev` itself already crosses when it
   // compiles this .mdx file.
   const metadata = new Function(`"use strict"; return (${metadataText});`)();

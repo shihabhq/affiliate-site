@@ -6,21 +6,21 @@ import { faqs } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "FAQ — Udemy Bangladesh | bKash Payment, Free Courses, Certificates & More",
+  title: "FAQ - Udemy Bangladesh | bKash Payment, Free Courses, Certificates & More",
   description:
-    "Answers to all common questions about buying Udemy courses in Bangladesh — bKash/Nagad payment, free courses, coupon codes, CPA marketing, Bangla tutorials, certificates, BDT pricing & more.",
+    "Answers to all common questions about buying Udemy courses in Bangladesh - bKash/Nagad payment, free courses, coupon codes, CPA marketing, Bangla tutorials, certificates, BDT pricing & more.",
   alternates: { canonical: `${siteConfig.domain}/faq` },
   openGraph: {
-    title: "FAQ — Udemy Course Bangladesh",
+    title: "FAQ - Udemy Course Bangladesh",
     description:
       "All your questions answered: bKash payment, free courses, certificates, CPA marketing, Bangla tutorials and more.",
     url: `${siteConfig.domain}/faq`,
-    images: [{ url: "/assets/OG.png", width: 1904, height: 982, alt: "FAQ — Udemy Course Bangladesh" }],
+    images: [{ url: "/assets/OG.png", width: 1904, height: 982, alt: "FAQ - Udemy Course Bangladesh" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FAQ — Udemy Course Bangladesh",
-    description: "bKash payment, free courses, certificates, CPA marketing and more — answered.",
+    title: "FAQ - Udemy Course Bangladesh",
+    description: "bKash payment, free courses, certificates, CPA marketing and more - answered.",
     images: ["/assets/OG.png"],
   },
 };

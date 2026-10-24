@@ -50,7 +50,7 @@ export default function ProofGallery({ proofs, variant = "full" }: ProofGalleryP
             >
               <Image
                 src={src}
-                alt={`Purchase proof — ${name} Udemy course delivery in Bangladesh`}
+                alt={`Purchase proof - ${name} Udemy course delivery in Bangladesh`}
                 fill
                 className="object-contain"
                 sizes={

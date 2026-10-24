@@ -6,6 +6,7 @@ const footerLinks = [
   { label: "Home", href: "/" },
   { label: "All Courses", href: "/courses" },
   { label: "How to Buy", href: "/how-to-buy" },
+  { label: "Blog", href: "/blog" },
   { label: "Purchase Proofs", href: "/proofs" },
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
@@ -36,7 +37,7 @@ export default function Footer() {
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               Helping students and professionals in Bangladesh access world-class
-              Udemy courses — with bKash, Nagad, and Rocket payment. No dollar
+              Udemy courses - with bKash, Nagad, and Rocket payment. No dollar
               card needed.
             </p>
             {/* Address */}
@@ -75,6 +76,15 @@ export default function Footer() {
                 aria-label="WhatsApp"
               >
                 WhatsApp
+              </a>
+              <a
+                href={siteConfig.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+                aria-label="YouTube"
+              >
+                YouTube
               </a>
             </div>
           </div>
@@ -136,7 +146,7 @@ export default function Footer() {
           <p className="text-gray-400 text-xs leading-relaxed">
             <strong className="text-gray-300">Affiliate Disclosure:</strong> We
             are a Udemy affiliate. We may earn a commission when you purchase
-            through our links — at no extra cost to you. See our{" "}
+            through our links - at no extra cost to you. See our{" "}
             <Link href="/affiliate-disclosure" className="underline hover:text-white">
               full disclosure
             </Link>

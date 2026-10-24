@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Udemy Course Bangladesh",
+  title: "Privacy Policy - Udemy Course Bangladesh",
   description:
     "Privacy policy for Udemy Course Bangladesh. How we collect, use, and protect your information.",
   alternates: { canonical: `${siteConfig.domain}/privacy-policy` },
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
             Our website uses standard web analytics tools (such as those built
             into our hosting platform) that may collect information like your IP
             address, browser type, pages visited, and time on page. This data is
-            aggregated and anonymous — we cannot identify individual users from
+            aggregated and anonymous - we cannot identify individual users from
             this data.
           </p>
           <p>

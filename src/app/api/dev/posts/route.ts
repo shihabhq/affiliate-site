@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { listPosts, readPost, writePost } from "@/lib/dev/blog-editor";
 
 // Dev-only: reads/writes files under src/content/blog/. Never available
-// outside `next dev` — see the NODE_ENV check at the top of every handler.
+// outside `next dev` - see the NODE_ENV check at the top of every handler.
 // This is the write surface behind /dev/blog-editor.
 
 function notFoundOutsideDev() {

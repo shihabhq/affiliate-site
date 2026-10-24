@@ -31,7 +31,7 @@ export default function PaymentMethods() {
       <div className="max-w-7xl mx-auto text-center">
         <SectionHeading
           title="We Accept"
-          subtitle="Pay in BDT with your preferred local payment method — no dollar card needed."
+          subtitle="Pay in BDT with your preferred local payment method - no dollar card needed."
           centered
         />
         <div className="flex flex-wrap justify-center gap-6 mt-2">

@@ -13,7 +13,7 @@ export default function WelcomeModal() {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Show once per session — triggered by whichever comes first: 6s idle or first scroll.
+  // Show once per session - triggered by whichever comes first: 6s idle or first scroll.
   // Delayed so LCP fires and paints before the modal is ever created in the DOM.
   useEffect(() => {
     if (sessionStorage.getItem("ucb_welcome_shown")) return;
@@ -113,7 +113,7 @@ export default function WelcomeModal() {
             Buy Top career changing courses with lifetime access &amp; certificate.
           </p>
 
-          {/* Primary CTAs — Messaging (no card path) */}
+          {/* Primary CTAs - Messaging (no card path) */}
           <p className="text-sm text-gray-200 font-semibold mb-1">
             আপনার ডুয়াল কারেন্সি কার্ড নেই?
           </p>
@@ -156,7 +156,7 @@ export default function WelcomeModal() {
             <div className="flex-1 h-px bg-white/10" />
           </div>
 
-          {/* Secondary CTA — affiliate link */}
+          {/* Secondary CTA - affiliate link */}
           <AffiliateLink
             onClick={() => setOpen(false)}
             className="block w-full bg-purple-primary/80 hover:bg-purple-hover text-white font-bold text-sm py-3 rounded-xl transition-colors"

@@ -1,4 +1,4 @@
-// Course data — edit this file to add/remove courses shown on the website.
+// Course data - edit this file to add/remove courses shown on the website.
 // Each course entry maps to an image in public/courses/ and a category page.
 
 export type Course = {
@@ -48,7 +48,7 @@ export const courses: Course[] = [
   },
   {
     id: "100-days-code",
-    title: "100 Days Of Code — Web Development Bootcamp",
+    title: "100 Days Of Code - Web Development Bootcamp",
     slug: "100-days-of-code-web-development-bootcamp",
     link: "trk.udemy.com/NGYvq1",
     category: "web-development",
@@ -72,7 +72,7 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 110000,
     shortDescription:
-      "Jonas Schmedtmann's hands-on HTML/CSS course — builds real websites using Flexbox, Grid, and responsive design. A top choice for BD learners starting their web career.",
+      "Jonas Schmedtmann's hands-on HTML/CSS course - builds real websites using Flexbox, Grid, and responsive design. A top choice for BD learners starting their web career.",
     tags: ["HTML5", "CSS3", "Responsive Design", "Flexbox", "Grid"],
   },
   {
@@ -86,12 +86,12 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 75000,
     shortDescription:
-      "The most up-to-date React course available — covers hooks, Context API, Redux, and React Query. Ideal for Bangladeshi developers targeting remote jobs or Upwork clients.",
+      "The most up-to-date React course available - covers hooks, Context API, Redux, and React Query. Ideal for Bangladeshi developers targeting remote jobs or Upwork clients.",
     tags: ["React", "JavaScript", "Redux", "Hooks", "Context API"],
   },
   {
     id: "complete-digital-marketing",
-    title: "The Complete Digital Marketing Guide — 27 Courses in 1",
+    title: "The Complete Digital Marketing Guide - 27 Courses in 1",
     slug: "the-complete-digital-marketing-guide-27-courses-in-1",
     category: "digital-marketing",
     link: "trk.udemy.com/WOPvoe",
@@ -112,7 +112,7 @@ export const courses: Course[] = [
   },
   {
     id: "graphic-design-masterclass",
-    title: "Graphic Design Masterclass — Learn GREAT Design",
+    title: "Graphic Design Masterclass - Learn GREAT Design",
     slug: "graphic-design-masterclass-learn-great-design",
     category: "graphic-design",
     image: "/courses/Graphic Design Masterclass - Learn GREAT Design.png",
@@ -135,7 +135,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 65000,
     shortDescription:
-      "Learn Figma from absolute zero — wireframes, components, prototypes, and handoff. One of the most in-demand skills for Bangladeshi UI/UX freelancers right now.",
+      "Learn Figma from absolute zero - wireframes, components, prototypes, and handoff. One of the most in-demand skills for Bangladeshi UI/UX freelancers right now.",
     tags: ["Figma", "UI Design", "UX Design", "Prototyping", "Wireframing"],
   },
   {
@@ -150,12 +150,12 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 42000,
     shortDescription:
-      "A complete workflow from design to live website — Figma mockup, Webflow development, and freelancing strategy. Great for Bangladeshi designers who want to sell end-to-end web services.",
+      "A complete workflow from design to live website - Figma mockup, Webflow development, and freelancing strategy. Great for Bangladeshi designers who want to sell end-to-end web services.",
     tags: ["Figma", "Webflow", "Web Design", "Freelancing", "Portfolio"],
   },
   {
     id: "data-science-bootcamp",
-    title: "The Data Science Course — Complete Data Science Bootcamp 2026",
+    title: "The Data Science Course - Complete Data Science Bootcamp 2026",
     slug: "the-data-science-course-complete-data-science-bootcamp-2026",
     category: "data-science",
     image:
@@ -186,12 +186,12 @@ export const courses: Course[] = [
     rating: 4.6,
     reviewCount: 520000,
     shortDescription:
-      "The most reviewed Python course on Udemy — covers fundamentals through OOP, scripting, and web scraping. A smart first step for Bangladeshi students entering tech or data fields.",
+      "The most reviewed Python course on Udemy - covers fundamentals through OOP, scripting, and web scraping. A smart first step for Bangladeshi students entering tech or data fields.",
     tags: ["Python", "Programming", "OOP", "Scripting", "Automation"],
   },
   {
     id: "ai-engineer-bootcamp",
-    title: "The AI Engineer Course 2026 — Complete AI Engineer Bootcamp",
+    title: "The AI Engineer Course 2026 - Complete AI Engineer Bootcamp",
     slug: "the-ai-engineer-course-2026-complete-bootcamp",
     link: "trk.udemy.com/GbY4W9",
     category: "programming",
@@ -206,7 +206,7 @@ export const courses: Course[] = [
   },
   {
     id: "ai-claude-code",
-    title: "AI Coder — Complete Claude Code & Coding Agent Course",
+    title: "AI Coder - Complete Claude Code & Coding Agent Course",
     slug: "ai-coder-complete-claude-code-coding-agent-course",
     category: "programming",
     image: "/courses/AI-coder-complete-claude-code-coding-agent-course.png",
@@ -215,12 +215,12 @@ export const courses: Course[] = [
     rating: 4.8,
     reviewCount: 12000,
     shortDescription:
-      "Learn to use Claude as a coding co-pilot — build agents, automate repetitive tasks, and ship projects faster. A productivity game-changer for Bangladeshi developers and freelancers.",
+      "Learn to use Claude as a coding co-pilot - build agents, automate repetitive tasks, and ship projects faster. A productivity game-changer for Bangladeshi developers and freelancers.",
     tags: ["Claude AI", "AI Coding", "Agents", "Automation", "Productivity"],
   },
   {
     id: "excel-beginner-to-advanced",
-    title: "Microsoft Excel — Excel from Beginner to Advanced",
+    title: "Microsoft Excel - Excel from Beginner to Advanced",
     link: "trk.udemy.com/6kRQJV",
     slug: "microsoft-excel-from-beginner-to-advanced",
     category: "excel-finance",
@@ -229,7 +229,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviewCount: 650000,
     shortDescription:
-      "Udemy's most enrolled Excel course — Pivot Tables, VLOOKUP, and Macros explained simply. Essential for Bangladeshi job seekers, accountants, and data entry professionals.",
+      "Udemy's most enrolled Excel course - Pivot Tables, VLOOKUP, and Macros explained simply. Essential for Bangladeshi job seekers, accountants, and data entry professionals.",
     tags: ["Excel", "Pivot Tables", "VLOOKUP", "Macros", "Data Analysis"],
   },
   {
@@ -307,7 +307,7 @@ export const courses: Course[] = [
     id: "after-effects-cc-bootcamp",
     title: "Adobe After Effects CC Bootcamp: Beginner to Advanced",
     slug: "after-effects-cc-bootcamp",
-    category: "design",
+    category: "graphic-design",
     link: "trk.udemy.com/KBYvnn",
     image: "/courses/after-effects.webp",
     originalPrice: "$199.99",
@@ -327,7 +327,7 @@ export const courses: Course[] = [
     id: "sap-s4hana-mm-sourcing-procurement",
     title: "SAP S/4HANA Sourcing & Procurement (MM-Materials Management)",
     slug: "sap-s4hana-mm-sourcing-and-procurement",
-    category: "business",
+    category: "excel-finance",
     link: "trk.udemy.com/PzqvLz",
     image: "/courses/SAP.webp",
     originalPrice: "$199.99",
@@ -355,7 +355,7 @@ export const courses: Course[] = [
     id: "adobe-illustrator-essentials",
     title: "Adobe Illustrator CC - Essentials Training Course",
     slug: "adobe-illustrator-course",
-    category: "design",
+    category: "graphic-design",
     link: "trk.udemy.com/enx5oj",
     image: "/courses/illustrator.webp",
     originalPrice: "$199.99",
@@ -375,7 +375,7 @@ export const courses: Course[] = [
 
 // Pilot batch of course `id`s that get a dedicated detail page at
 // /courses/[category]/[slug] (see src/app/courses/[category]/[slug]/page.tsx and
-// src/data/courseDetails.ts). Keep this list in sync with courseDetails.ts —
+// src/data/courseDetails.ts). Keep this list in sync with courseDetails.ts -
 // every id here must have a matching entry there, and vice versa. Add more ids
 // here (and write matching content in courseDetails.ts) to expand the rollout.
 export const detailPageCourseIds: string[] = [
@@ -387,7 +387,7 @@ export const detailPageCourseIds: string[] = [
   "data-science-bootcamp",
 ];
 
-// Proof image filenames from public/proofs/ — prefixed with /proofs/ at render time
+// Proof image filenames from public/proofs/ - prefixed with /proofs/ at render time
 export const proofs: string[] = [
   "ms.png",
   "ai-engineer.png",
@@ -500,7 +500,7 @@ export const faqs = [
   {
     question: "Do I need a Udemy account?",
     answer:
-      "Yes, you will need a free Udemy account (sign up at udemy.com with your email). We enroll the course into your account after payment. If you don't have one, we can guide you through creating it — it's free and takes under two minutes.",
+      "Yes, you will need a free Udemy account (sign up at udemy.com with your email). We enroll the course into your account after payment. If you don't have one, we can guide you through creating it - it's free and takes under two minutes.",
   },
   {
     question: "Is this service legitimate and safe?",
@@ -516,7 +516,7 @@ export const faqs = [
     question:
       "What if I have a dollar/dual-currency card? Should I still use your service?",
     answer:
-      "If you have a dollar card, you can click our affiliate link and buy directly on Udemy — you will get the same discounted price (up to 90% off during Udemy sales). Our WhatsApp/bKash service is specifically for those without a dollar card.",
+      "If you have a dollar card, you can click our affiliate link and buy directly on Udemy - you will get the same discounted price (up to 90% off during Udemy sales). Our WhatsApp/bKash service is specifically for those without a dollar card.",
   },
   {
     question: "Can I buy a course as a gift for someone else?",
@@ -545,12 +545,12 @@ export const faqs = [
   {
     question: "Can I access the course on mobile?",
     answer:
-      "Yes. Udemy has a free mobile app for Android and iOS. Once you have access to a course, you can watch it on your phone, tablet, or computer — anywhere, anytime.",
+      "Yes. Udemy has a free mobile app for Android and iOS. Once you have access to a course, you can watch it on your phone, tablet, or computer - anywhere, anytime.",
   },
   {
     question: "Are there free Udemy courses available in Bangladesh?",
     answer:
-      "Udemy does offer some free courses, but most quality courses are paid. However, during Udemy's frequent sales, you can get courses for up to 90% off — sometimes as low as ৳500–৳800 BDT. That's almost free! We always share the best available discount links. For card users, click our affiliate link. For bKash users, just message us.",
+      "Udemy does offer some free courses, but most quality courses are paid. However, during Udemy's frequent sales, you can get courses for up to 90% off - sometimes as low as ৳500–৳800 BDT. That's almost free! We always share the best available discount links. For card users, click our affiliate link. For bKash users, just message us.",
   },
   {
     question: "Is there a 100% off coupon code for Udemy courses?",
@@ -561,12 +561,12 @@ export const faqs = [
     question:
       "Can I learn CPA marketing through Udemy? Available in Bangladesh?",
     answer:
-      "Yes! Udemy has excellent CPA marketing courses that teach you how to earn online through cost-per-action marketing. These are very popular with Bangladeshi freelancers. You can buy any CPA marketing Udemy course through our service — pay with bKash, Nagad, or Rocket. Just message us with the course name.",
+      "Yes! Udemy has excellent CPA marketing courses that teach you how to earn online through cost-per-action marketing. These are very popular with Bangladeshi freelancers. You can buy any CPA marketing Udemy course through our service - pay with bKash, Nagad, or Rocket. Just message us with the course name.",
   },
   {
     question: "Are there Udemy courses in Bangla (Bengali) language?",
     answer:
-      "Yes, Udemy has a growing number of courses taught in Bengali/Bangla — including web development, digital marketing, freelancing, and more. You can filter by language on Udemy. To buy any Bangla Udemy course in Bangladesh with bKash payment, just message us with the course link and we'll handle the rest.",
+      "Yes, Udemy has a growing number of courses taught in Bengali/Bangla - including web development, digital marketing, freelancing, and more. You can filter by language on Udemy. To buy any Bangla Udemy course in Bangladesh with bKash payment, just message us with the course link and we'll handle the rest.",
   },
   {
     question: "Is there a good SEO course on Udemy for Bangladeshi learners?",
@@ -576,6 +576,6 @@ export const faqs = [
   {
     question: "What web development courses are available on Udemy?",
     answer:
-      "Udemy has hundreds of web development courses — from HTML/CSS basics to React, Node.js, Python, and full-stack development. Top courses like The Web Developer Bootcamp and The Ultimate React Course are extremely popular in Bangladesh. You can buy any of these with bKash or a dollar card through our service.",
+      "Udemy has hundreds of web development courses - from HTML/CSS basics to React, Node.js, Python, and full-stack development. Top courses like The Web Developer Bootcamp and The Ultimate React Course are extremely popular in Bangladesh. You can buy any of these with bKash or a dollar card through our service.",
   },
 ];
