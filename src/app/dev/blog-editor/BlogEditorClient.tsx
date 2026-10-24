@@ -173,7 +173,7 @@ export default function BlogEditorClient() {
         {/* Sidebar */}
         <aside className="bg-white border border-gray-border rounded-xl p-4 h-fit">
           <p className="text-xs font-bold text-gray-text uppercase tracking-wide mb-3">
-            Dev only — Blog Editor
+            Dev only - Blog Editor
           </p>
           <button
             onClick={startNewPost}
@@ -242,7 +242,7 @@ export default function BlogEditorClient() {
           )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Field label="Title (English — for SEO: <title>, OG, search results)">
+            <Field label="Title (English - for SEO: <title>, OG, search results)">
               <input
                 className="input"
                 value={form.title}
@@ -255,7 +255,7 @@ export default function BlogEditorClient() {
                 }
               />
             </Field>
-            <Field label="Display title (Bangla — shown to readers as the H1, optional)">
+            <Field label="Display title (Bangla - shown to readers as the H1, optional)">
               <input
                 className="input"
                 value={form.displayTitle}
@@ -278,7 +278,7 @@ export default function BlogEditorClient() {
             />
           </Field>
 
-          <Field label="Description (English — meta description, ≤160 chars)">
+          <Field label="Description (English - meta description, ≤160 chars)">
             <textarea
               className="input"
               rows={2}
@@ -394,7 +394,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    // Plain div, not <label> — a <label> forwards clicks anywhere inside it
+    // Plain div, not <label> - a <label> forwards clicks anywhere inside it
     // to the first form control it contains, which broke BodyEditor's hidden
     // file input (clicking into the CodeMirror editor was opening the native
     // file picker). Simple single-input fields don't need the label wrap

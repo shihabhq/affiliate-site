@@ -83,11 +83,11 @@ export default function CourseCard({ course }: { course: Course }) {
   return (
     <>
       <article className="bg-white border border-gray-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-        {/* Course image — links to the full course page when one exists */}
+        {/* Course image - links to the full course page when one exists */}
         {detailHref ? <Link href={detailHref}>{image}</Link> : image}
 
         <div className="p-4 flex flex-col flex-1">
-          {/* Title — links to the full course page when one exists */}
+          {/* Title - links to the full course page when one exists */}
           <h3 className="text-sm font-bold text-dark leading-snug mb-2 line-clamp-2 min-h-[2.5rem]">
             {detailHref ? (
               <Link href={detailHref} className="hover:text-purple-primary transition-colors">

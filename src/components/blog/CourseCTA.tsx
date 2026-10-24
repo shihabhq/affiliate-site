@@ -13,7 +13,7 @@ type CourseCTAProps = {
 
 // Used inside blog post MDX as <CourseCTA courseId="web-dev-bootcamp" />.
 // Pulls title/image/link straight from src/data/courses.ts so a blog post
-// never hardcodes a course link — it always stays in sync with the catalog.
+// never hardcodes a course link - it always stays in sync with the catalog.
 export default function CourseCTA({ courseId, note, buttonLabel }: CourseCTAProps) {
   const course = courses.find((c) => c.id === courseId);
 

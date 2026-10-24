@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — Udemy Course Bangladesh",
+  title: "Affiliate Disclosure - Udemy Course Bangladesh",
   description:
     "Affiliate disclosure for Udemy Course Bangladesh. Learn about our relationship with Udemy and how we earn commissions on purchases.",
   alternates: { canonical: `${siteConfig.domain}/affiliate-disclosure` },
@@ -33,9 +33,9 @@ export default function AffiliateDisclosurePage() {
 
           <h2 className="text-lg font-bold text-dark mt-6">What This Means</h2>
           <p>
-            When you click on certain links on this website — specifically links labeled
+            When you click on certain links on this website - specifically links labeled
             &quot;Get Discount on Udemy,&quot; &quot;Get up to 90% OFF on Udemy,&quot; or similar affiliate
-            CTAs — and subsequently make a purchase on Udemy.com, we may earn an affiliate
+            CTAs - and subsequently make a purchase on Udemy.com, we may earn an affiliate
             commission from Udemy, Inc.
           </p>
           <p>
@@ -47,7 +47,7 @@ export default function AffiliateDisclosurePage() {
 
           <h2 className="text-lg font-bold text-dark mt-6">Our Affiliate Relationship with Udemy</h2>
           <p>
-            We are an independent affiliate — we do not work for Udemy, Inc. and are not
+            We are an independent affiliate - we do not work for Udemy, Inc. and are not
             employees or official representatives of Udemy in any capacity. The affiliate
             program simply allows us to earn a commission for referring customers to Udemy.
           </p>
@@ -69,7 +69,7 @@ export default function AffiliateDisclosurePage() {
           </p>
           <p>
             We are transparent about all pricing. We will always tell you the exact BDT
-            price before you pay — there are no hidden charges.
+            price before you pay - there are no hidden charges.
           </p>
 
           <h2 className="text-lg font-bold text-dark mt-6">Editorial Independence</h2>

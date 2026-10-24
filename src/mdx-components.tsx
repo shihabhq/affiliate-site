@@ -54,7 +54,7 @@ const components: MDXComponents = {
     <strong className="font-bold text-dark">{children}</strong>
   ),
   hr: () => <hr className="border-gray-border my-8" />,
-  // Fallback for plain markdown `![]()` images — prefer <BlogImage /> for
+  // Fallback for plain markdown `![]()` images - prefer <BlogImage /> for
   // captions, but this keeps a stray markdown image from breaking layout.
   img: ({ alt = "", ...rest }) => (
     <Image

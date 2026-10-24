@@ -11,7 +11,7 @@ type OfferCTAProps = {
   buttonLabel?: string;
 };
 
-// Used inside blog post MDX as <OfferCTA title="..." image="..." link="..." /> —
+// Used inside blog post MDX as <OfferCTA title="..." image="..." link="..." /> -
 // same card/modal as <CourseCTA />, for a bundle or sale that isn't a single
 // catalog entry in src/data/courses.ts.
 export default function OfferCTA(props: OfferCTAProps) {

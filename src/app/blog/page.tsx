@@ -6,12 +6,12 @@ import { siteConfig } from "@/config/site";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Blog — Udemy Course Tips & Guides for Bangladesh",
+  title: "Blog - Udemy Course Tips & Guides for Bangladesh",
   description:
-    "Guides, tips, and course reviews for Bangladeshi learners — how to buy Udemy courses with bKash, best courses by category, and more.",
+    "Guides, tips, and course reviews for Bangladeshi learners - how to buy Udemy courses with bKash, best courses by category, and more.",
   alternates: { canonical: `${siteConfig.domain}/blog` },
   openGraph: {
-    title: "Blog — Udemy Course Tips & Guides for Bangladesh",
+    title: "Blog - Udemy Course Tips & Guides for Bangladesh",
     description:
       "Guides and course reviews for Bangladeshi learners. Learn how to buy Udemy courses with bKash, Nagad, and Rocket.",
     url: `${siteConfig.domain}/blog`,
@@ -55,10 +55,10 @@ export default async function BlogIndexPage() {
           </nav>
 
           <h1 className="text-3xl sm:text-4xl font-bold text-dark tracking-tight mb-2 leading-tight">
-            Blog — Tips &amp; Guides
+            Blog - Tips &amp; Guides
           </h1>
           <p className="text-gray-text mb-10 max-w-2xl">
-            Guides for Bangladeshi learners — how to buy Udemy courses, best
+            Guides for Bangladeshi learners - how to buy Udemy courses, best
             courses by category, and tips to get the most from online education.
           </p>
 
@@ -69,7 +69,7 @@ export default async function BlogIndexPage() {
                 Articles coming soon
               </h2>
               <p className="text-sm text-gray-text mb-6 max-w-xs mx-auto">
-                New posts weekly — covering how to buy Udemy courses in
+                New posts weekly - covering how to buy Udemy courses in
                 Bangladesh, course reviews, and earning-online tips.
               </p>
               <Link

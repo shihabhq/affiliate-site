@@ -14,13 +14,13 @@ type InlineOfferCardProps = {
   imageAlt?: string;
   /** Optional short note shown under the title (Bangla is fine) */
   note?: string;
-  /** Label on the button — defaults to Bangla, override for an English post */
+  /** Label on the button - defaults to Bangla, override for an English post */
   buttonLabel?: string;
 };
 
 // Shared UI behind <CourseCTA /> and <OfferCTA /> in blog posts. Clicking it opens
 // the same PurchaseModal used everywhere else on the site (WhatsApp / Messenger /
-// course-specific "Get up to 90% OFF" link) — no CTA logic is duplicated here.
+// course-specific "Get up to 90% OFF" link) - no CTA logic is duplicated here.
 export default function InlineOfferCard({
   title,
   image,

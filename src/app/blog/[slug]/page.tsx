@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
             {displayTitleOf(metadata)}
           </h1>
 
-          {/* Cover image — 16:9 */}
+          {/* Cover image - 16:9 */}
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-gray-100 mb-8">
             <Image
               src={metadata.coverImage}
@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: Props) {
             />
           </div>
 
-          {/* Content — Bengali font applied only when the post is written in Bangla */}
+          {/* Content - Bengali font applied only when the post is written in Bangla */}
           <div className={metadata.language === "bn" ? "font-bengali" : undefined}>
             <Post />
           </div>

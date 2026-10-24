@@ -6,6 +6,7 @@ export const siteConfig = {
   facebook: "https://www.facebook.com/udemycoursebangladesh",
   facebookMessage: "https://m.me/udemycoursebangladesh",
   instagram: "https://www.instagram.com/udemybangladesh/",
+  youtube: "https://www.youtube.com/@udemybd5576",
   whatsappNumber: "+8801338770408",
   whatsappLink: "https://wa.me/8801338770408",
   phone: "+8801735857535",

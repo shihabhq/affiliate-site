@@ -12,14 +12,14 @@ const steps = [
     number: "2",
     title: "Pick Your Payment Method",
     description:
-      "Have a dollar card? Click 'Get Discount' and buy directly on Udemy. No card? Message us on WhatsApp or Messenger — we'll handle it.",
+      "Have a dollar card? Click 'Get Discount' and buy directly on Udemy. No card? Message us on WhatsApp or Messenger - we'll handle it.",
     accent: "bg-purple-primary",
   },
   {
     number: "3",
     title: "Pay & Get Your Course",
     description:
-      "Pay in BDT via bKash, Nagad, or Rocket. We enroll the course on your Udemy account — lifetime access + certificate, usually within a few hours.",
+      "Pay in BDT via bKash, Nagad, or Rocket. We enroll the course on your Udemy account - lifetime access + certificate, usually within a few hours.",
     accent: "bg-purple-primary",
   },
 ];
@@ -34,7 +34,7 @@ export default function HowItWorks() {
           </h2>
           <div className="h-1 w-10 bg-purple-primary rounded-full mt-3 mx-auto mb-4" />
           <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto">
-            Buy any Udemy course in 3 simple steps — with or without a dollar card.
+            Buy any Udemy course in 3 simple steps - with or without a dollar card.
           </p>
         </div>
 
