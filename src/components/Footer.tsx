@@ -8,6 +8,7 @@ const footerLinks = [
   { label: "How to Buy", href: "/how-to-buy" },
   { label: "Blog", href: "/blog" },
   { label: "Purchase Proofs", href: "/proofs" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

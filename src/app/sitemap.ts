@@ -19,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/free-courses", lastModified: "2026-07-01", changeFrequency: "weekly", priority: 0.7 },
     { path: "/blog", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.8 },
     { path: "/proofs", lastModified: "2026-07-15", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/testimonials", lastModified: "2026-11-17", changeFrequency: "weekly", priority: 0.7 },
     { path: "/faq", lastModified: "2026-07-01", changeFrequency: "monthly", priority: 0.7 },
     { path: "/about", lastModified: "2026-06-01", changeFrequency: "monthly", priority: 0.5 },
     { path: "/contact", lastModified: "2026-06-01", changeFrequency: "yearly", priority: 0.5 },

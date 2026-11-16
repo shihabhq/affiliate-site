@@ -9,9 +9,12 @@ import SectionHeading from "@/components/SectionHeading";
 import CourseGrid from "@/components/CourseGrid";
 import YouTubeFacade from "@/components/YouTubeFacade";
 import ProofGallery from "@/components/ProofGallery";
+import TestimonialGallery from "@/components/TestimonialGallery";
+import PartnerWithUs from "@/components/PartnerWithUs";
 import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import { courses, proofs, faqs } from "@/data/courses";
+import { testimonials } from "@/data/testimonials";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -73,6 +76,7 @@ const howToBuyVideoTitle =
 
 const featuredCourses = courses.slice(0, 8);
 const previewProofs = proofs.slice(0, 12);
+const previewTestimonials = testimonials.slice(0, 12);
 const homeFaqs = faqs.slice(0, 5);
 
 export default function HomePage() {
@@ -168,8 +172,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FAQ preview */}
-      <section className="py-16 px-4 bg-white" id="faq-preview">
+      {/* 7. Testimonials */}
+      <section className="py-16 px-4 bg-white" id="testimonials-preview">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeading
+            title="What Our Customers Say"
+            subtitle="Real Facebook reviews and WhatsApp messages from customers in Bangladesh, in their own words."
+            centered
+          />
+          <TestimonialGallery testimonials={previewTestimonials} variant="preview" />
+          <div className="text-center">
+            <Link
+              href="/testimonials"
+              className="inline-block bg-dark text-white font-semibold px-8 py-3 rounded hover:bg-gray-800 transition-colors"
+            >
+              See All Testimonials →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. FAQ preview */}
+      <section className="py-16 px-4 bg-bg-light" id="faq-preview">
         <div className="max-w-3xl mx-auto">
           <SectionHeading
             title="Frequently Asked Questions"
@@ -188,7 +212,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Final CTA */}
+      {/* 9. Partner with us */}
+      <PartnerWithUs />
+
+      {/* 10. Final CTA */}
       <FinalCTA />
     </>
   );
