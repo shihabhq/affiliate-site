@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
@@ -18,15 +18,32 @@ const PAGE_SIZE = 12;
 
 export default function ProofGallery({ proofs, variant = "full" }: ProofGalleryProps) {
   const isPreview = variant === "preview";
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const visibleProofs = isPreview ? proofs : proofs.slice(0, visibleCount);
   const remaining = proofs.length - visibleProofs.length;
 
-  const openLightbox = (filename: string) => {
-    setLightboxSrc(`/proofs/${filename}`);
-  };
-  const closeLightbox = () => setLightboxSrc(null);
+  const openLightbox = (index: number) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+  const showPrev = () =>
+    setLightboxIndex((i) => (i === null ? null : (i - 1 + visibleProofs.length) % visibleProofs.length));
+  const showNext = () =>
+    setLightboxIndex((i) => (i === null ? null : (i + 1) % visibleProofs.length));
+
+  // Keyboard navigation while the lightbox is open
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [lightboxIndex, visibleProofs.length]);
+
+  const currentFilename = lightboxIndex !== null ? visibleProofs[lightboxIndex] : null;
+  const lightboxSrc = currentFilename ? `/proofs/${currentFilename}` : null;
 
   return (
     <>
@@ -44,7 +61,7 @@ export default function ProofGallery({ proofs, variant = "full" }: ProofGalleryP
           return (
             <button
               key={filename}
-              onClick={() => openLightbox(filename)}
+              onClick={() => openLightbox(i)}
               className={`relative block w-full aspect-4/5 rounded-lg overflow-hidden border border-gray-border bg-white hover:shadow-lg transition-shadow focus:outline-none focus:ring-2 focus:ring-purple-primary ${previewVisibility}`}
               aria-label={`View purchase proof for ${name}`}
             >
@@ -82,29 +99,73 @@ export default function ProofGallery({ proofs, variant = "full" }: ProofGalleryP
       )}
 
       {/* Lightbox */}
-      {lightboxSrc && (
+      {lightboxSrc && lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
           onClick={closeLightbox}
           role="dialog"
           aria-modal="true"
-          aria-label="Proof image lightbox"
+          aria-label="Proof image viewer"
         >
           <div
-            className="bg-white rounded-lg overflow-hidden max-w-lg w-full shadow-2xl"
+            className="relative flex flex-col bg-white rounded-lg overflow-hidden max-w-3xl w-full h-[85vh] shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full aspect-video bg-gray-100">
+            {/* Close */}
+            <button
+              onClick={closeLightbox}
+              aria-label="Close"
+              className="absolute top-2 right-2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Counter */}
+            {visibleProofs.length > 1 && (
+              <div className="absolute top-2 left-2 z-10 bg-black/50 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                {lightboxIndex + 1} / {visibleProofs.length}
+              </div>
+            )}
+
+            {/* Image */}
+            <div className="relative flex-1 min-h-0 bg-gray-100">
               <Image
                 src={lightboxSrc}
                 alt="Purchase proof from Udemy Course Bangladesh"
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 100vw, 512px"
+                sizes="(max-width: 768px) 100vw, 768px"
               />
+
+              {visibleProofs.length > 1 && (
+                <>
+                  <button
+                    onClick={showPrev}
+                    aria-label="Previous proof"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                  >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={showNext}
+                    aria-label="Next proof"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                  >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
             </div>
-            <div className="p-4 space-y-2">
-              <p className="text-sm text-gray-text text-center mb-3">
+
+            {/* CTA footer */}
+            <div className="shrink-0 p-4 space-y-2 border-t border-gray-border">
+              <p className="text-sm text-gray-text text-center mb-1">
                 Real delivery from a real customer in Bangladesh 🇧🇩
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -125,12 +186,6 @@ export default function ProofGallery({ proofs, variant = "full" }: ProofGalleryP
                   Chat on WhatsApp
                 </a>
               </div>
-              <button
-                onClick={closeLightbox}
-                className="w-full text-xs text-gray-text hover:text-dark py-2 transition-colors"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
